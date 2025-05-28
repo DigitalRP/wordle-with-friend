@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Create Custom Wordle Puzzles - Play Wordle with Friends</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Create Custom Wordle Puzzles: Wordle with friends using your own custom challenges. Design and share unique puzzles for endless fun!">
+    <meta name="robots" content="index,follow">
+    <link rel="canonical" href="https://wordlewithfriends.vercel.app/create-custom-wordle-puzzles">
+    <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/img/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Create Custom Wordle Puzzles","description":"Information about Create Custom Wordle Puzzles","url":"https://wordlewithfriends.vercel.app/create-custom-wordle-puzzles","publisher":{"@type":"Organization","name":"Wordle With Friends","url":"https://wordlewithfriends.vercel.app/"},"datePublished":"2025-05-28","dateModified":"2025-05-28","mainEntity":{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is a Custom Wordle Puzzle?","acceptedAnswer":{"@type":"Answer","text":"A Custom Wordle Puzzle allows you to design your own word challenges. You choose the secret word, its length, and can even add hints. This lets you personalize the game for specific groups, friends, or educational purposes. It moves beyond the daily generic puzzle, offering tailored fun."}}]}}</script>
+    <style>
+        /* Internal CSS for media queries specifically for the tool */
+        @media (max-width: 768px) {
+            .togc > div {
+                flex-direction: column !important;
+                align-items: stretch !important;
+            }
+            .togc .input-group,
+            .togc .controls {
+                width: 100% !important;
+                margin-bottom: 15px !important;
+            }
+            .togc button {
+                width: 100% !important;
+            }
+            .togc input[type="text"],
+            .togc input[type="number"],
+            .togc textarea {
+                width: calc(100% - 20px) !important;
+            }
+            .togc .word-grid {
+                flex-wrap: wrap !important;
+                justify-content: center !important;
+            }
+        }
+        @media (max-width: 480px) {
+            .togc {
+                padding: 15px !important;
+            }
+            .togc h2 {
+                font-size: 1.5em !important;
+            }
+            .togc label,
+            .togc input,
+            .togc textarea,
+            .togc button {
+                font-size: 0.9em !important;
+            }
+            .togc .word-grid div {
+                width: 35px !important;
+                height: 35px !important;
+                font-size: 1.2em !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+      <div class="container">
+        <div class="logo">
+          <a href="/">Wordle With Friends</a>
+        </div>
+        <nav class="main-nav">
+          <button class="menu-toggle" aria-label="Toggle Menu">
+            <span></span><span></span><span></span>
+          </button>
+          <ul class="nav-menu">
+            <li><a href="/">Wordle With Friends</a></li><li><a href="/play-wordle-with-friends-online">Play Wordle With</a></li><li class="active"><a href="/create-custom-wordle-puzzles">Create Custom Wordle</a></li><li><a href="/wordle-with-friends-solver-tool">Wordle With Friends</a></li>
+ <li class="has-dropdown">
+   <a href="/about-us">About Us</a>
+   <ul class="dropdown"><li><a href="/about-us">About Us</a></li><li><a href="/contact-us">Contact Us</a></li><li><a href="/terms-and-conditions">Terms and Conditions</a></li><li><a href="/privacy-policy">Privacy Policy</a></li><li><a href="/disclaimer">Disclaimer</a></li></ul></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>Create Custom Wordle Puzzles for Engaging Wordle with Friends Sessions</h1>
+                <p>Create Custom Wordle Puzzles to challenge your friends with unique and personalized word games. This tool empowers you to design challenges that go beyond the everyday, making your Wordle with Friends experience truly unique. Craft puzzles based on inside jokes, specific themes, or academic vocabulary for endless fun and learning.</p>
+                <p>Building your own Wordle puzzles opens up new avenues for competitive play and creative expression. Share your custom creations effortlessly with others, fostering a dynamic and engaging Wordle with Friends community. It's an excellent way to keep the game fresh and exciting for everyone involved.</p>
+                <img src="/img/create-custom-wordle-puzzles-image.png" alt="Person creating custom Wordle puzzles on a laptop" width="600" height="314" class="responsive-image">
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="container">
+                <div class="togc" style="background-color: #e3f2fd; border-radius: 12px; padding: 30px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); display: flex; flex-direction: column; align-items: center; margin-bottom: 40px;">
+                    <h2 style="color: #1565c0; margin-bottom: 25px; font-size: 2em; text-align: center;">Custom Wordle Puzzle Creator</h2>
+                    <p style="text-align: center; color: #424242; margin-bottom: 25px; font-size: 1.1em;">Design your own Wordle challenge to share with friends. Simply enter your secret word and add an optional hint.</p>
+
+                    <div style="display: flex; flex-direction: column; width: 100%; max-width: 600px;">
+                        <div class="input-group" style="margin-bottom: 20px; display: flex; flex-direction: column;">
+                            <label for="customWord" style="margin-bottom: 8px; font-weight: bold; color: #1e88e5;">
+                                <i class="fa-solid fa-keyboard" style="color: #1a73e8; margin-right: 8px;"></i>Your Secret Word:
+                            </label>
+                            <input type="text" id="customWord" placeholder="Enter your word (e.g., FRIEND)" maxlength="8" style="padding: 12px; border: 1px solid #90caf9; border-radius: 8px; font-size: 1.1em; outline: none; transition: border-color 0.3s ease; width: calc(100% - 24px);">
+                        </div>
+
+                        <div class="input-group" style="margin-bottom: 20px; display: flex; flex-direction: column;">
+                            <label for="wordLength" style="margin-bottom: 8px; font-weight: bold; color: #1e88e5;">
+                                <i class="fa-solid fa-ruler-horizontal" style="color: #1a73e8; margin-right: 8px;"></i>Word Length:
+                            </label>
+                            <input type="number" id="wordLength" value="5" min="4" max="8" style="padding: 12px; border: 1px solid #90caf9; border-radius: 8px; font-size: 1.1em; outline: none; transition: border-color 0.3s ease; width: calc(100% - 24px);">
+                        </div>
+
+                        <div class="input-group" style="margin-bottom: 25px; display: flex; flex-direction: column;">
+                            <label for="puzzleHint" style="margin-bottom: 8px; font-weight: bold; color: #1e88e5;">
+                                <i class="fa-solid fa-lightbulb" style="color: #1a73e8; margin-right: 8px;"></i>Optional Hint:
+                            </label>
+                            <textarea id="puzzleHint" placeholder="e.g., A common emotion, A type of animal" rows="3" style="padding: 12px; border: 1px solid #90caf9; border-radius: 8px; font-size: 1.1em; outline: none; transition: border-color 0.3s ease; resize: vertical; width: calc(100% - 24px);"></textarea>
+                        </div>
+
+                        <button id="createPuzzleBtn" style="background-color: #2196f3; color: white; padding: 15px 25px; border: none; border-radius: 8px; font-size: 1.2em; font-weight: bold; cursor: pointer; transition: background-color 0.3s ease, transform 0.2s ease; margin-bottom: 20px; width: 100%;">
+                            <i class="fa-solid fa-puzzle-piece" style="color: white; margin-right: 10px;"></i>Create Custom Wordle Puzzle
+                        </button>
+
+                        <p id="errorMessage" style="color: #ef5350; text-align: center; margin-top: 15px; font-weight: bold;"></p>
+
+                        <div id="wordGrid" class="word-grid" style="display: flex; justify-content: center; margin-top: 25px; flex-wrap: wrap;">
+                            <!-- Word letters will be displayed here -->
+                        </div>
+
+                        <div class="input-group" style="margin-top: 30px; display: flex; flex-direction: column;">
+                            <label for="shareableLink" style="margin-bottom: 8px; font-weight: bold; color: #1e88e5;">
+                                <i class="fa-solid fa-link" style="color: #1a73e8; margin-right: 8px;"></i>Shareable Link:
+                            </label>
+                            <input type="text" id="shareableLink" readonly style="padding: 12px; border: 1px solid #90caf9; border-radius: 8px; font-size: 1.1em; background-color: #e0f7fa; color: #3f51b5; cursor: copy; width: calc(100% - 24px);">
+                            <small style="color: #616161; margin-top: 8px; text-align: center;">Click the link above to copy it and share with your friends!</small>
+                        </div>
+                    </div>
+                </div>
+
+                <h2>Create Custom Wordle Puzzles</h2>
+                <p>Creating custom Wordle puzzles offers a fantastic way to personalize your game experience. It allows you to move beyond the daily challenge and design word games that specifically cater to your interests or those of your friends. This personalization makes playing Wordle with friends even more engaging and memorable.</p>
+                <p>Whether you want to test specific vocabulary, create challenges around a special event, or simply have a unique game to share, custom puzzles provide the flexibility needed. The process is straightforward, ensuring that anyone can quickly become a puzzle master and share their creations with their Wordle with friends group.</p>
+
+                <h3>Why Build Your Own Wordle Challenges?</h3>
+                <p>Building your own Wordle challenges provides several advantages that elevate the standard game. It transforms a solo activity into a highly interactive group experience. This customization allows for endless possibilities, ensuring the game stays fresh and exciting.</p>
+                <ul>
+                    <li><i class="fa-solid fa-palette" style="color: #1a73e8; margin-right: 8px;"></i>Personalized themes and topics tailored to your group's interests.</li>
+                    <li><i class="fa-solid fa-book" style="color: #1a73e8; margin-right: 8px;"></i>Specific vocabulary for educational settings or niche communities.</li>
+                    <li><i class="fa-solid fa-brain" style="color: #1a73e8; margin-right: 8px;"></i>Enhanced replayability, offering new challenges daily or weekly.</li>
+                    <li><i class="fa-solid fa-medal" style="color: #1a73e8; margin-right: 8px;"></i>Friendly competition by challenging friends with words only they would know.</li>
+                </ul>
+
+                <h3>How to Create Your First Custom Wordle Puzzle</h3>
+                <p>Making your first custom Wordle puzzle is a simple process with our intuitive tool. You do not need any special technical skills. Just follow a few basic steps to get started and share your unique challenge with others.</p>
+                <div style="display: flex; flex-wrap: wrap; justify-content: space-around; margin: 30px 0;">
+                    <div style="background-color: #f5f5f5; border-radius: 10px; padding: 20px; margin: 10px; flex: 1 1 calc(33% - 40px); min-width: 280px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); text-align: center; display: flex; flex-direction: column; align-items: center;">
+                        <i class="fa-solid fa-pen-to-square" style="color: #1a73e8; font-size: 3em; margin-bottom: 15px;"></i>
+                        <h4 style="color: #1e88e5; margin-bottom: 10px;">Choose Your Word</h4>
+                        <p style="color: #424242;">Select a word of appropriate length and difficulty. Consider words relevant to your Wordle with friends group.</p>
+                    </div>
+                    <div style="background-color: #f5f5f5; border-radius: 10px; padding: 20px; margin: 10px; flex: 1 1 calc(33% - 40px); min-width: 280px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); text-align: center; display: flex; flex-direction: column; align-items: center;">
+                        <i class="fa-solid fa-info-circle" style="color: #1a73e8; font-size: 3em; margin-bottom: 15px;"></i>
+                        <h4 style="color: #1e88e5; margin-bottom: 10px;">Add Hints</h4>
+                        <p style="color: #424242;">Provide an optional hint to guide players without revealing the word. This makes puzzles accessible to all skill levels.</p>
+                    </div>
+                    <div style="background-color: #f5f5f5; border-radius: 10px; padding: 20px; margin: 10px; flex: 1 1 calc(33% - 40px); min-width: 280px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); text-align: center; display: flex; flex-direction: column; align-items: center;">
+                        <i class="fa-solid fa-share-alt" style="color: #1a73e8; font-size: 3em; margin-bottom: 15px;"></i>
+                        <h4 style="color: #1e88e5; margin-bottom: 10px;">Share with Wordle with Friends</h4>
+                        <p style="color: #424242;">Generate a unique link for your puzzle. Share it directly through messages or social media for instant play.</p>
+                    </div>
+                </div>
+
+                <h2>Elevating Your Wordle with Friends Experience</h2>
+                <p>The ability to create custom Wordle puzzles transforms the game from a solitary daily habit into a vibrant social activity. It encourages interaction and friendly competition among players. This aspect is particularly strong when playing Wordle with friends, as custom challenges can be designed around shared experiences or inside jokes, deepening the connection.</p>
+                <p>Custom puzzles allow for a more personalized and engaging group activity. You can tailor difficulty, introduce new themes, and ensure everyone has a memorable time. This level of customization breathes new life into the familiar format, keeping players eager for the next challenge.</p>
+
+                <h3>Strategies for Crafting Memorable Puzzles</h3>
+                <p>Crafting a memorable Wordle puzzle requires thoughtful consideration of word choice and difficulty. Balance the challenge with fairness to ensure an enjoyable experience for all players. A good custom puzzle should feel rewarding to solve, not frustrating.</p>
+                <table style="width: 100%; border-collapse: collapse; margin: 20px 0;">
+                    <caption style="font-weight: bold; margin-bottom: 10px; color: #1e88e5; font-size: 1.1em;">Word Selection for Custom Wordle Puzzles</caption>
+                    <thead>
+                        <tr style="background-color: #e3f2fd;">
+                            <th style="padding: 12px; border: 1px solid #bbdefb; text-align: left; color: #1565c0;">Category</th>
+                            <th style="padding: 12px; border: 1px solid #bbdefb; text-align: left; color: #1565c0;">Characteristics</th>
+                            <th style="padding: 12px; border: 1px solid #bbdefb; text-align: left; color: #1565c0;">Example Words</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="padding: 12px; border: 1px solid #bbdefb;">Easy Puzzles</td>
+                            <td style="padding: 12px; border: 1px solid #bbdefb;">Common words, unique letters, frequent vowels.</td>
+                            <td style="padding: 12px; border: 1px solid #bbdefb;">TABLE, HOUSE, MONEY</td>
+                        </tr>
+                        <tr style="background-color: #f9f9f9;">
+                            <td style="padding: 12px; border: 1px solid #bbdefb;">Medium Puzzles</td>
+                            <td style="padding: 12px; border: 1px solid #bbdefb;">Less common words, some repeated letters, specific themes.</td>
+                            <td style="padding: 12px; border: 1px solid #bbdefb;">QUIET, GRAPE, CHALK</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 12px; border: 1px solid #bbdefb;">Hard Puzzles</td>
+                            <td style="padding: 12px; border: 1px solid #bbdefb;">Rare words, multiple repeated letters, uncommon letter combinations.</td>
+                            <td style="padding: 12px; border: 1px solid #bbdefb;">CRYPT, FUZZY, JAZZY</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Sharing Your Creations: Wordle with Friends Group Play</h3>
+                <p>Once you create custom Wordle puzzles, sharing them is key to enjoying the experience with others. Our tool provides a direct link, making it easy to distribute your challenges. This streamlines the process of inviting others to join your custom Wordle with friends game, ensuring quick setup and minimal fuss.</p>
+                <ul>
+                    <li><i class="fa-solid fa-comments" style="color: #1a73e8; margin-right: 8px;"></i>Share links in group chats like WhatsApp or Discord for quick access.</li>
+                    <li><i class="fa-solid fa-users" style="color: #1a73e8; margin-right: 8px;"></i>Post challenges on social media to invite a broader audience to play.</li>
+                    <li><i class="fa-solid fa-chart-line" style="color: #1a73e8; margin-right: 8px;"></i>Organize friendly competitions and track scores among your Wordle with friends circle.</li>
+                </ul>
+
+                <h2>Beyond Basic Wordle: Advanced Customization Options</h2>
+                <p>While the core Wordle experience is great, creating custom Wordle puzzles allows for advanced customization that goes beyond the default settings. This opens up possibilities for deeper engagement and specialized challenges. Players can explore new dimensions of wordplay by moving past standard puzzle constraints.</p>
+                <p>These advanced options help keep the game fresh and relevant for different groups. From thematic words to unique rules, custom Wordle puzzles can be as simple or complex as desired. This flexibility ensures that every game is unique and tailored to the players.</p>
+
+                <h3>Integrating Themes and Categories</h3>
+                <p>Integrating specific themes or categories into your custom Wordle puzzles makes them more engaging. This is particularly useful when playing Wordle with friends who share common interests. Consider topics like movies, sports, literature, or specific historical events.</p>
+                <p>For example, you could create a puzzle where all the words relate to "Gardening" or "Space Exploration." Such thematic puzzles provide an additional layer of challenge and interest, making the game more specialized and fun. They also encourage players to think within a specific vocabulary set.</p>
+
+                <h3>Challenges and Variations</h3>
+                <p>Custom Wordle puzzles allow for creative variations that go beyond typical gameplay. You can introduce house rules or unique challenges to make each game distinct. This keeps the Wordle with friends experience dynamic and prevents it from becoming repetitive.</p>
+                <p>Consider challenges like "all words must start with a vowel" or "no common letters." These variations force players to adjust their strategies and approach word-guessing differently. Such twists add excitement and require players to think outside the box, testing their vocabulary and problem-solving skills in new ways.</p>
+
+                <h2>The Impact of Custom Puzzles on Wordle with Friends Community</h2>
+                <p>The introduction of custom Wordle puzzles has a significant positive impact on the Wordle with friends community. It transforms passive playing into active content creation, fostering a sense of ownership and collaboration. Players become puzzle designers, sharing their unique challenges.</p>
+                <p>This active participation strengthens bonds among players and promotes a more vibrant, interactive gaming environment. Custom puzzles serve as conversation starters and friendly competitive tools. They encourage groups to come together and share their linguistic creativity, making every session unique.</p>
+
+                <h3>Fostering Creativity and Engagement</h3>
+                <p>Custom Wordle puzzles greatly foster creativity among players. People can think of words that hold personal meaning or are related to inside jokes within their Wordle with friends group. This creative freedom makes the game more personal and relatable.</p>
+                <p>Engagement increases when players know they are tackling a puzzle designed by someone they know. It adds a layer of fun and competition when trying to solve a friend's specific challenge. This personal touch encourages repeated play and ongoing interaction within the community.</p>
+
+                <h3>Educational Applications of Custom Wordle</h3>
+                <p>Beyond entertainment, creating custom Wordle puzzles offers significant educational applications. Teachers can design word lists for vocabulary lessons, spelling practice, or subject-specific terms. This makes learning interactive and enjoyable for students.</p>
+                <p>Parents can use custom puzzles to help children learn new words or reinforce concepts. It provides a fun, low-pressure way to improve literacy skills. The gamified approach makes educational content more appealing, helping students to grasp and remember new information effectively.</p>
+
+                <h2>Best Practices for Playing Custom Wordle with Friends</h2>
+                <p>To ensure a smooth and enjoyable experience when playing custom Wordle with friends, establishing some best practices is beneficial. Clear communication and agreement on rules can prevent misunderstandings. This helps maintain the fun and competitive spirit without unnecessary friction.</p>
+                <p>Discussing expectations beforehand helps everyone know what to expect from the custom challenges. It ensures that the focus remains on the joy of wordplay and friendly competition. Implementing these practices makes the game more rewarding for everyone involved.</p>
+
+                <h3>Setting Rules and Expectations</h3>
+                <p>Before beginning a custom Wordle with friends session, it is wise to set clear rules and expectations. Discuss how hints will be used, if any specific word categories are allowed, and what constitutes a valid win. This upfront discussion ensures fair play and reduces confusion.</p>
+                <p>Agreeing on the number of guesses allowed or any time limits can also enhance the competitive aspect. For instance, decide if players need to submit screenshots of their results. Clear guidelines help everyone stay on the same page and enjoy the game consistently.</p>
+
+                <h3>Tracking Progress and Performance</h3>
+                <p>Tracking progress and performance in custom Wordle puzzles adds an extra layer of competition and satisfaction. While our tool focuses on creation, you can manually keep track of scores or use external methods. This helps to gauge who is the ultimate word master among your Wordle with friends group.</p>
+                <p>Maintaining a simple shared spreadsheet can be effective for noting down attempts and successes. This informal leaderboard can boost morale and encourage continuous participation. Knowing how to <a href="/wordle-with-friends-statistics-tracker">track progress</a> can significantly enhance the long-term enjoyment of custom challenges.</p>
+
+                <h2>Troubleshooting Common Issues When Creating Puzzles</h2>
+                <p>While creating custom Wordle puzzles is generally straightforward, users might occasionally encounter minor issues. Knowing how to troubleshoot these common problems ensures a seamless experience. This allows you to quickly resolve issues and get back to enjoying Wordle with friends without delay.</p>
+                <p>Most problems are easily fixable and relate to input errors or sharing mechanisms. Our tool is designed for simplicity, but a quick check of your inputs can often solve any snags. This section helps you identify and fix typical challenges you might face.</p>
+
+                <h3>Word Not Accepted?</h3>
+                <p>If your custom Wordle word is not accepted, check the input requirements. Ensure the word consists only of alphabetic characters and matches the selected length. Our tool validates these aspects to provide a playable puzzle for others.</p>
+                <p>Double-check for any accidental spaces or special characters. Confirm the word's length matches the numeric input value. Correcting these details usually resolves the issue, allowing you to generate your puzzle successfully and share it with your Wordle with friends.</p>
+
+                <h3>Sharing Link Problems?</h3>
+                <p>Should you encounter issues with the sharing link, first confirm that the puzzle was successfully created and the link appeared. Sometimes, network issues can briefly affect link generation or loading. Try regenerating the puzzle or refreshing the page if the link does not appear as expected.</p>
+                <p>Ensure you are copying the entire link. If sharing via a messaging app, confirm it is not truncating the URL. Most platforms handle long URLs well, but a complete copy is essential for friends to <a href="/play-wordle-with-friends-online">play online</a> correctly.</p>
+
+                <h2>Future of Custom Wordle with Friends</h2>
+                <p>The future of custom Wordle with friends is bright, with potential for even more innovative features and community involvement. As more players engage with custom puzzles, the demand for enhanced functionalities will grow. This evolution is driven by user creativity and feedback.</p>
+                <p>We anticipate new tools and platforms emerging that further simplify the creation and sharing process. The collaborative nature of custom Wordle makes it an ideal candidate for continuous development. This commitment to improvement ensures the game remains a staple for word enthusiasts.</p>
+
+                <h3>Community-Driven Enhancements</h3>
+                <p>Future enhancements for custom Wordle puzzles will likely be community-driven. User feedback helps shape new features, such as more diverse word lists or advanced hint options. This collaborative approach ensures the tool meets the needs of its players.</p>
+                <p>Ideas from the Wordle with friends community can lead to integrations with popular communication platforms or specialized puzzle modes. Active participation from users helps prioritize development efforts. This ensures that new features directly address player desires, making the tool more robust and useful.</p>
+
+                <h3>Expanding Customization Capabilities</h3>
+                <p>Expect an expansion in customization capabilities for custom Wordle puzzles. This could include options for varying grid sizes, custom color schemes for generated puzzles, or even different rule sets. More granular control allows for even more personalized challenges.</p>
+                <p>The ability to create custom puzzles with specific difficulty levels or themes will become more sophisticated. This will further enhance the Wordle with friends experience, offering endless ways to challenge and entertain. The focus will be on providing tools that allow users to express their creativity fully.</p>
+            </div>
+        </section>
+
+        <section class="faq-section">
+            <div class="container">
+                <h2>Frequently Asked Questions</h2>
+                <p>Get answers to common questions about creating custom Wordle puzzles. This section covers various aspects from word selection to sharing your challenges with friends. Understanding these details will help you maximize your enjoyment and creativity when playing Wordle with friends.</p>
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <h3>What is a Custom Wordle Puzzle?</h3>
+                        <p>A Custom Wordle Puzzle allows you to design your own word challenges. You choose the secret word, its length, and can even add hints. This lets you personalize the game for specific groups, friends, or educational purposes. It moves beyond the daily generic puzzle, offering tailored fun.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>How do I share my custom Wordle puzzle?</h3>
+                        <p>After creating your puzzle using our tool, a unique shareable link will be generated. Simply copy this link and send it to your Wordle with friends group via messaging apps, email, or social media. They can click the link to play your personalized challenge immediately.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Can I choose any word for my puzzle?</h3>
+                        <p>You can choose any word that meets the tool's criteria, typically consisting only of letters and matching the selected length. While common words are great for general play, custom puzzles allow you to use niche words or inside jokes for your Wordle with friends group.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Are hints required for custom puzzles?</h3>
+                        <p>Hints are optional when creating custom Wordle puzzles. They can be very helpful for guiding players, especially if you choose a difficult or very specific word. Adding a clever hint can make the game more enjoyable and accessible for all skill levels in your Wordle with friends circle.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>What are the benefits of playing custom Wordle with friends?</h3>
+                        <p>Playing custom Wordle with friends offers several benefits, including personalized challenges, increased engagement, and educational opportunities. It fosters creativity, strengthens social bonds through shared unique experiences, and keeps the game fresh and exciting. This customization brings new life to the familiar game.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Is there a limit to how many puzzles I can create?</h3>
+                        <p>Our tool generally allows you to create an unlimited number of custom Wordle puzzles. Feel free to experiment with as many words and hints as you like. There are no restrictions on your creativity when designing challenges for your Wordle with friends, ensuring endless fun.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        
+ <div class="footer-top">
+   <div class="footer-logo">
+     <h3>Wordle With Friends</h3>
+     <p>Your trusted source for Wordle With Friends information.</p>
+   </div>
+   <div class="footer-contact">
+     <h4>Contact Us</h4>
+     <p>Email: info@wordle-with-friends.com</p>
+   </div>
+ </div>
+ <div class="footer-links">
+   <h4>Quick Links</h4>
+   <ul>
+     <li><a href="/">Wordle With Friends</a></li><li><a href="/play-wordle-with-friends-online">Play Wordle With Friends Online</a></li><li><a href="/create-custom-wordle-puzzles">Create Custom Wordle Puzzles</a></li><li><a href="/wordle-with-friends-solver-tool">Wordle With Friends Solver Tool</a></li><li><a href="/wordle-with-friends-statistics-tracker">Wordle With Friends Statistics Tracker</a></li><li><a href="/wordle-with-friends-for-kids">Wordle With Friends For Kids</a></li><li><a href="/about-us">About Us</a></li><li><a href="/contact-us">Contact Us</a></li><li><a href="/privacy-policy">Privacy Policy</a></li><li><a href="/terms-and-conditions">Terms And Conditions</a></li><li><a href="/disclaimer">Disclaimer</a></li>
+   </ul>
+ </div>
+ <div class="footer-bottom">
+   <p>&copy; 2025 <a href="https://wordlewithfriends.vercel.app" target="_blank" >Wordle With Friends</a>. All rights reserved.</p>
+ </div>
+      </div>
+    </footer>
+    <button id="scroll-top" class="scroll-top"><i class="fa fa-arrow-up"></i></button>
+    <script src="/js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const wordInput = document.getElementById('customWord');
+            const lengthInput = document.getElementById('wordLength');
+            const hintInput = document.getElementById('puzzleHint');
+            const createButton = document.getElementById('createPuzzleBtn');
+            const shareLinkDisplay = document.getElementById('shareableLink');
+            const errorMessage = document.getElementById('errorMessage');
+            const wordGrid = document.getElementById('wordGrid');
+
+            // Set default max length on input to 8 for user guidance
+            wordInput.setAttribute('maxlength', '8');
+
+            createButton.addEventListener('click', () => {
+                errorMessage.textContent = ''; // Clear previous errors
+                shareLinkDisplay.value = ''; // Clear previous link
+                wordGrid.innerHTML = ''; // Clear previous grid
+
+                const word = wordInput.value.trim().toUpperCase();
+                const selectedLength = parseInt(lengthInput.value, 10);
+                const hint = encodeURIComponent(hintInput.value.trim());
+
+                if (!word) {
+                    errorMessage.textContent = 'Please enter a word.';
+                    return;
+                }
+
+                if (!/^[A-Z]+$/.test(word)) {
+                    errorMessage.textContent = 'Word must contain only letters (A-Z).';
+                    return;
+                }
+
+                if (word.length !== selectedLength) {
+                    errorMessage.textContent = `Word length must be exactly ${selectedLength} letters.`;
+                    return;
+                }
+
+                // Generate the shareable link
+                // For a real Wordle game, you'd likely encrypt or store the word on a server
+                // and link to an ID. For this example, we'll pass it in URL params.
+                const baseUrl = 'https://wordlewithfriends.vercel.app/play-custom-wordle'; // Placeholder URL
+                let puzzleLink = `${baseUrl}?word=${word}`;
+                if (hint) {
+                    puzzleLink += `&hint=${hint}`;
+                }
+                shareLinkDisplay.value = puzzleLink;
+
+                // Visual representation of the word grid
+                for (let i = 0; i < word.length; i++) {
+                    const letterBox = document.createElement('div');
+                    letterBox.textContent = word[i]; // Show the word for creation context
+                    letterBox.style.cssText = `
+                        width: 40px;
+                        height: 40px;
+                        background-color: #e0f2f7; /* Light blue */
+                        border: 1px solid #90caf9; /* Medium blue */
+                        color: #2196f3;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        font-size: 1.5em;
+                        font-weight: bold;
+                        margin: 5px;
+                        border-radius: 4px;
+                        box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+                    `;
+                    wordGrid.appendChild(letterBox);
+                }
+            });
+
+            shareLinkDisplay.addEventListener('click', () => {
+                shareLinkDisplay.select();
+                document.execCommand('copy');
+                // Optional: Provide visual feedback that text has been copied
+                const originalText = shareLinkDisplay.value;
+                shareLinkDisplay.value = 'Link copied!';
+                setTimeout(() => {
+                    shareLinkDisplay.value = originalText;
+                }, 1500);
+            });
+        });
+    </script>
+</body>
+</html>
