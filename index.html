@@ -1,258 +1,155 @@
-<!DOCTYPE html><html lang="en"><head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>wordle with friends - Challenge Your Friends</title>
-    <meta name="description" content="wordle with friends: Play daily word challenges against friends, track scores, and enjoy competitive fun together!">
-    <meta name="robots" content="index,follow">
-    <link rel="canonical" href="https://wordlewithfriends.vercel.app/">
-    <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="/img/favicon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-    <link rel="stylesheet" href="/css/styles.css">
-    <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Wordle With Friends","description":"Information about wordle with friends","url":"https://wordlewithfriends.vercel.app/","publisher":{"@type":"Organization","name":"Wordle With Friends","url":"https://wordlewithfriends.vercel.app/"},"datePublished":"2025-05-28","dateModified":"2025-05-28","mainEntity":{"@type":"WebSite","name":"Wordle With Friends","url":"https://wordlewithfriends.vercel.app/","potentialAction":{"@type":"SearchAction","target":"https://wordlewithfriends.vercel.app/search?q={search_term_string}","query-input":"required name=search_term_string"},"hasPart":[{"@type":"SiteNavigationElement","name":"Play Wordle With Friends Online","url":"https://wordlewithfriends.vercel.app/play-wordle-with-friends-online"},{"@type":"SiteNavigationElement","name":"Create Custom Wordle Puzzles","url":"https://wordlewithfriends.vercel.app/create-custom-wordle-puzzles"},{"@type":"SiteNavigationElement","name":"Wordle With Friends Solver Tool","url":"https://wordlewithfriends.vercel.app/wordle-with-friends-solver-tool"}]}}</script>
-    <style>
-        @media (max-width: 768px) {
-            .togc {
-                flex-direction: column;
-                padding: 10px;
-            }
-            .togc .solver-controls,
-            .togc .game-grid,
-            .togc .results {
-                width: 100%;
-                margin: 10px 0;
-            }
-        }
-    </style>
-</head>
-<body>
-    <header class="site-header">
-      <div class="container">
-        <div class="logo">
-          <a href="/">Wordle With Friends</a>
-        </div>
-        <nav class="main-nav">
-          <button class="menu-toggle" aria-label="Toggle Menu">
-            <span></span><span></span><span></span>
-          </button>
-          <ul class="nav-menu">
-            <li class="active"><a href="/">Wordle With Friends</a></li><li><a href="/play-wordle-with-friends-online">Play Wordle With</a></li><li><a href="/create-custom-wordle-puzzles">Create Custom Wordle</a></li><li><a href="/wordle-with-friends-solver-tool">Wordle With Friends</a></li>
- <li class="has-dropdown">
-   <a href="/about-us">About Us</a>
-   <ul class="dropdown"><li><a href="/about-us">About Us</a></li><li><a href="/contact-us">Contact Us</a></li><li><a href="/terms-and-conditions">Terms and Conditions</a></li><li><a href="/privacy-policy">Privacy Policy</a></li><li><a href="/disclaimer">Disclaimer</a></li></ul></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
+<!DOCTYPE html><html lang="en"><head><title>Wordle with Friends - Play with Friends</title><meta name="description" content="wordle with friends: Challenge your friends to solve daily puzzles together in multiplayer mode. Compete and have fun"><meta name="robots" content="index,follow"><link rel="canonical" href="https://wordle-with-friend.vercel.app/"><link rel="icon" href="/img/favicon.ico" type="image/x-icon"><link rel="icon" href="/img/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"><link rel="stylesheet" href="/css/styles.css"><script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Wordle With Friends","description":"Information about wordle with friends","url":"https://wordle-with-friend.vercel.app/","publisher":{"@type":"Organization","name":"Wordle With Friends","url":"https://wordle-with-friend.vercel.app/"},"datePublished":"2025-05-28","dateModified":"2025-05-28","mainEntity":{"@type":"WebSite","name":"Wordle With Friends","url":"https://wordle-with-friend.vercel.app/","potentialAction":{"@type":"SearchAction","target":"https://wordle-with-friend.vercel.app/search?q={search_term_string}","query-input":"required name=search_term_string"},"hasPart":[{"@type":"SiteNavigationElement","name":"Play Wordle With Friends Online","url":"https://wordle-with-friend.vercel.app/play-wordle-with-friends-online"},{"@type":"SiteNavigationElement","name":"Create Custom Wordle Puzzles","url":"https://wordle-with-friend.vercel.app/create-custom-wordle-puzzles"},{"@type":"SiteNavigationElement","name":"Wordle With Friends Solver Tool","url":"https://wordle-with-friend.vercel.app/wordle-with-friends-solver-tool"}]}}</script><style>/* Internal CSS for the Wordle with Friends Score Tracker tool - for responsiveness */@media (max-width: 768px) {.togc {padding: 15px !important;}.togc-grid {grid-template-columns: 1fr !important;}.togc-input-group label {font-size: 0.9em !important;}.togc-button-group button {padding: 8px 12px !important;font-size: 0.9em !important;}.togc-leaderboard-table th, .togc-leaderboard-table td {padding: 6px 4px !important;font-size: 0.8em !important;}}@media (max-width: 480px) {.togc-input-group input[type="text"], .togc-input-group input[type="number"] {padding: 6px !important;font-size: 0.85em !important;}.togc-radio-group label {font-size: 0.85em !important;}.togc-button-group button {padding: 6px 10px !important;font-size: 0.8em !important;}.togc-leaderboard-table th, .togc-leaderboard-table td {font-size: 0.75em !important;}}</style></head><body><header class="site-header"><div class="container"><div class="logo"><a href="/">Wordle With Friends</a></div><nav class="main-nav"><button class="menu-toggle" aria-label="Toggle Menu"><span></span><span></span><span></span></button><ul class="nav-menu"><li class="active"><a href="/">Wordle With Friends</a></li><li><a href="/play-wordle-with-friends-online">Play Wordle With</a></li><li><a href="/create-custom-wordle-puzzles">Create Custom Wordle</a></li><li><a href="/wordle-with-friends-solver-tool">Wordle With Friends</a></li><li class="has-dropdown"><a href="/about-us">About Us</a><ul class="dropdown"><li><a href="/about-us">About Us</a></li><li><a href="/contact-us">Contact Us</a></li><li><a href="/terms-and-conditions">Terms and Conditions</a></li><li><a href="/privacy-policy">Privacy Policy</a></li><li><a href="/disclaimer">Disclaimer</a></li></ul></li></ul></nav></div></header><main><section class="hero-section"><div class="container"><h1>Wordle With Friends: Play and Compete Together</h1><p>wordle with friends provides a dynamic way to enjoy the popular word puzzle with a social twist. This multiplayer variant lets you challenge your closest companions, share the excitement of daily puzzles, and track your progress against each other. It transforms a solitary word game into a fun, interactive group experience, fostering friendly competition and shared problem-solving.</p><img src="/img/wordle-with-friends-image.png" alt="Group of friends playing Wordle together on their phones, laughing and pointing at screens" width="600" height="314" class="responsive-image"></div></section><section class="content-section"><div class="container"><h2>wordle with friends: The Ultimate Multiplayer Word Game</h2><p>Playing wordle with friends introduces a new dimension to the popular word-guessing game. It allows individuals to connect and compete directly, moving beyond just sharing daily scores. This social aspect makes each game more engaging and provides bragging rights for the sharpest word sleuths in your circle. The core mechanics remain similar to the original, but the added interaction creates a richer experience.</p><p>This version maintains the familiar grid and letter-guessing system, but with a focus on shared or competitive play. Players might tackle the same daily puzzle, comparing their number of guesses. Alternatively, some platforms let players create custom word challenges for their friends. This diversity in play modes ensures there is always a fresh way to enjoy wordle with friends.</p><h3>Getting Started with Wordle With Friends</h3><p>Beginning your journey with wordle with friends is straightforward. Most versions require you to create an account or link through an existing social media profile. Once set up, you can easily invite friends by sharing a unique game link or searching for their usernames within the platform. The process is designed to be quick, getting you into the game without delay.</p><p>After inviting your friends, you can start a new game or join an existing challenge. The interface typically provides clear instructions on how to submit guesses and track your progress against others. Communication features often allow for friendly banter or strategic discussions during a live game, adding to the social fun of wordle with friends.</p><h3>Different Modes of Play for Wordle With Friends</h3><p>The flexibility of wordle with friends extends to its various game modes. Some platforms offer a synchronous play mode where all players guess simultaneously, racing to solve the puzzle first. This creates an exciting, fast-paced environment. Other modes might involve asynchronous play, allowing friends to solve the same puzzle at their own pace and compare results later.</p><p>Beyond competition, collaborative modes also exist, where friends work together to solve a single puzzle, sharing insights and strategies. Custom game modes allow players to pick their own words, adjust puzzle length, or even set specific rules. These options enhance the appeal of wordle with friends for different groups and play styles.</p><h2>Strategies to Excel in Wordle With Friends</h2><p>Mastering wordle with friends involves more than just a good vocabulary; it requires strategic thinking. Understanding letter frequency and common word patterns can significantly improve your chances of guessing the word in fewer attempts. Starting with words that contain multiple vowels and common consonants is a widely accepted approach. Words like "CRANE" or "ADIEU" are popular first guesses due to their diverse letter composition.</p><p>Observing your friends' progress and the common strategies they employ can also give you an advantage. Adapting your opening words based on their success or failure can help you refine your own approach. For those seeking to sharpen their performance, exploring effective strategies can transform your gameplay. This continuous learning makes wordle with friends an intellectually stimulating pastime.</p><table><thead><tr><th>Starting Word</th><th>Common Letters Covered</th><th>Strategic Benefit</th></tr></thead><tbody><tr><td>CRANE</td><td>C, R, A, N, E (vowels, common consonants)</td><td>High letter diversity, good for eliminating many possibilities.</td></tr><tr><td>ADIEU</td><td>A, D, I, E, U (all vowels, common consonant)</td><td>Excellent for vowel discovery, often narrows down choices.</td></tr><tr><td>SLATE</td><td>S, L, A, T, E (common consonants, key vowel)</td><td>Strong for s-words and common endings/beginnings.</td></tr><tr><td>ROAST</td><td>R, O, A, S, T (common consonants, two vowels)</td><td>Good for identifying common middle and end letters.</td></tr><tr><td>LINER</td><td>L, I, N, E, R (diverse common letters)</td><td>Helps reveal position of common letters quickly.</td></tr></tbody></table><h3>Communicating and Collaborating in Wordle With Friends</h3><p>Many wordle with friends platforms integrate communication tools, allowing players to chat during or after games. This feature is particularly useful for collaborative play, where friends can discuss potential guesses or share their reasoning. Even in competitive modes, the chat can be a source of playful taunting or encouragement, adding a social layer to the game.</p><p>Sharing your game board or a screenshot of your results is another common way to interact. This visual sharing allows friends to see each other's paths to the solution. It fosters discussion about different strategies and sometimes humorous insights into wrong guesses. The ability to easily share progress enhances the social bond of wordle with friends.</p><h2>Tracking Progress and Leaderboards for Wordle With Friends</h2><p>A key element of competitive wordle with friends is the ability to track your performance. Most platforms provide personal statistics, showing your win streak, number of games played, and average guesses per win. This data helps you monitor your improvement over time and identifies areas where you might need to refine your strategy.</p><p>Leaderboards are a core component, ranking players based on various metrics. These can include total wins, best win streak, or lowest average guesses. Competing for the top spot on a leaderboard adds a significant motivational factor to wordle with friends. It turns casual play into a quest for mastery among your group of friends.</p><div class="togc" style="background-color: #e0f2f7; border-radius: 12px; padding: 30px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); margin-top: 40px; font-family: 'Arial', sans-serif; max-width: 800px; margin-left: auto; margin-right: auto; display: flex; flex-direction: column; gap: 25px;">
+    <h2 style="color: #0d47a1; text-align: center; margin-bottom: 20px; font-size: 2em;">Wordle With Friends Score Tracker <i class="fa-solid fa-trophy" style="color: #0d47a1;"></i></h2>
+    <p style="color: #333; text-align: center; font-size: 1.1em; line-height: 1.5;">Track your Wordle with friends game results, calculate stats, and see who truly is the word master! Enter results below to update the leaderboard dynamically.</p>
 
-    <main>
-        <section class="hero-section">
-            <div class="container">
-                <h1>Wordle With Friends: The Ultimate Social Word Challenge</h1>
-                <p>wordle with friends transforms the popular solo word game into an engaging group activity. This version allows players to compete directly, share daily results, and see who can solve the puzzle in the fewest attempts. It brings a new layer of excitement and social interaction to the beloved word-guessing format.</p>
-                <p>Playing wordle with friends is more than just guessing words; it is a way to connect with others. Friends, family, and colleagues can challenge each other, fostering friendly competition and shared fun. This communal aspect makes each daily puzzle a much-anticipated event.</p>
-                <img src="/img/wordle-with-friends-image.png" alt="Group of friends playing wordle together on a screen" width="600" height="314" class="responsive-image">
+    <div class="togc-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+        <div class="togc-input-section" style="background-color: #f5fafd; padding: 25px; border-radius: 10px; box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.05); display: flex; flex-direction: column; gap: 15px;">
+            <h3 style="color: #1565c0; margin-bottom: 15px; font-size: 1.5em;"><i class="fa-solid fa-plus-circle" style="color: #1565c0;"></i> Add Game Result</h3>
+            <div class="togc-input-group" style="display: flex; flex-direction: column;">
+                <label for="playerName" style="color: #424242; font-weight: bold; margin-bottom: 5px;">Player Name:</label>
+                <input type="text" id="playerName" placeholder="e.g., Alice" style="padding: 10px; border: 1px solid #bbdefb; border-radius: 6px; font-size: 1em; outline: none; transition: border-color 0.3s;" onfocus="this.style.borderColor='#2196f3';" onblur="this.style.borderColor='#bbdefb';">
             </div>
-        </section>
+            <div class="togc-input-group" style="display: flex; flex-direction: column;">
+                <label for="guesses" style="color: #424242; font-weight: bold; margin-bottom: 5px;">Number of Guesses (1-6 for Win):</label>
+                <input type="number" id="guesses" min="1" max="6" placeholder="e.g., 4" style="padding: 10px; border: 1px solid #bbdefb; border-radius: 6px; font-size: 1em; outline: none; transition: border-color 0.3s;" onfocus="this.style.borderColor='#2196f3';" onblur="this.style.borderColor='#bbdefb';">
+            </div>
+            <div class="togc-radio-group" style="display: flex; gap: 15px; margin-top: 10px;">
+                <label style="color: #424242; font-weight: bold;"><input type="radio" name="outcome" value="win" checked style="margin-right: 5px;"> Win</label>
+                <label style="color: #424242; font-weight: bold;"><input type="radio" name="outcome" value="lose" style="margin-right: 5px;"> Lose</label>
+            </div>
+            <div class="togc-button-group" style="display: flex; gap: 15px; margin-top: 20px;">
+                <button onclick="addGameResult()" style="background-color: #2196f3; color: white; padding: 12px 20px; border: none; border-radius: 8px; font-size: 1.1em; cursor: pointer; transition: background-color 0.3s, transform 0.2s;" onmouseover="this.style.backgroundColor='#1976d2';" onmouseout="this.style.backgroundColor='#2196f3';" onmousedown="this.style.transform='scale(0.98)';">Add Result <i class="fa-solid fa-check-circle" style="color: white;"></i></button>
+                <button onclick="resetData()" style="background-color: #90caf9; color: #1a237e; padding: 12px 20px; border: none; border-radius: 8px; font-size: 1.1em; cursor: pointer; transition: background-color 0.3s, transform 0.2s;" onmouseover="this.style.backgroundColor='#64b5f6';" onmouseout="this.style.backgroundColor='#90caf9';" onmousedown="this.style.transform='scale(0.98)';">Reset All <i class="fa-solid fa-trash" style="color: #1a237e;"></i></button>
+            </div>
+            <p id="errorMessage" style="color: #d32f2f; margin-top: 15px; text-align: center; font-size: 0.9em;"></p>
+        </div>
 
-        <section class="content-section">
-            <div class="container">
-                <h2>Wordle With Friends: How It Works</h2>
-                <p>wordle with friends takes the familiar mechanics of the original game and adds a social dimension. Players typically compete on the same daily word, comparing their scores at the end. Some platforms allow direct challenges, where one player sets a word for another to guess. This enhances the competitive spirit among participants.</p>
-                <p>The core gameplay involves guessing a five-letter word within six attempts. After each guess, players receive feedback: green letters are correct and in the right position, yellow letters are correct but in the wrong position, and grey letters are not in the word at all. This feedback guides subsequent guesses, making each attempt a strategic step towards the solution. Many people appreciate this structured approach to word solving.</p>
-
-                <h3>Setting Up Your Wordle With Friends Group</h3>
-                <p>Starting a wordle with friends group is straightforward. Begin by choosing a platform that supports multiplayer or shared game modes. Many online versions offer dedicated features for inviting friends or sharing results effortlessly. Consider using messaging apps to coordinate daily plays and share outcomes.</p>
-                <p>Establish clear rules for your group. Decide if you will all play the official daily Wordle or use a custom word generator. Agree on when results will be shared and how to handle hints or discussions during the game. This ensures fair play and maximizes the fun for everyone involved.</p>
-
-                <h3>Benefits of Playing Wordle With Friends</h3>
-                <p>Playing wordle with friends offers numerous advantages beyond simple entertainment. It sharpens cognitive skills, encourages vocabulary expansion, and promotes critical thinking. The social aspect provides a sense of community and shared accomplishment. Participants can celebrate victories together and learn from each other's strategies.</p>
-                <p>This shared activity strengthens bonds and creates memorable experiences. It provides a simple yet engaging way for friends to interact daily, even when physically apart. Many find that the friendly competition motivates them to improve their word-guessing abilities, making each game of wordle with friends more exciting.</p>
-                <div class="feature-grid">
-                    <div class="grid-item">
-                        <h3><i class="fas fa-brain" style="color:#007bff;"></i> Cognitive Boost</h3>
-                        <p>Regular play improves problem-solving skills and word recognition. Players learn to analyze patterns and make educated guesses.</p>
-                    </div>
-                    <div class="grid-item">
-                        <h3><i class="fas fa-users" style="color:#007bff;"></i> Social Connection</h3>
-                        <p>It creates a shared activity for friends and family, fostering communication and friendly rivalry. Discussion about strategies is common.</p>
-                    </div>
-                    <div class="grid-item">
-                        <h3><i class="fas fa-trophy" style="color:#007bff;"></i> Competitive Fun</h3>
-                        <p>Direct competition adds an exciting layer, motivating players to perform better. Leaderboards can track progress over time.</p>
-                    </div>
-                    <div class="grid-item">
-                        <h3><i class="fas fa-lightbulb" style="color:#007bff;"></i> Vocabulary Expansion</h3>
-                        <p>Encountering new words and strategies helps broaden vocabulary. Players often learn new words during the game.</p>
-                    </div>
-                </div>
-
-                <h3>Strategies for Wordle With Friends Success</h3>
-                <p>Achieving success in wordle with friends often involves a combination of smart opening words and logical deduction. A good starting word should contain common vowels and consonants, such as 'ADIEU' or 'CRANE'. This helps to quickly eliminate or confirm several letters.</p>
-                <p>After the first guess, analyze the feedback carefully. Prioritize using letters that were yellow or green. Avoid using grey letters in subsequent guesses. Consider words that maximize the chances of revealing new letters, even if they seem less likely to be the final answer. Discussing initial strategies with friends can also be beneficial.</p>
-                <p>One effective strategy involves focusing on letter positions. If a letter is green, it stays in that spot. If it is yellow, it must be in a different spot within the word. Systematically narrowing down possibilities is key. Many players find success by creating mental lists of remaining options after each guess. This systematic approach helps in finding the solution quickly.</p>
-
-                <h3>Comparing Solo Wordle and Wordle With Friends</h3>
-                <p>While the core mechanics are identical, playing wordle with friends introduces a dynamic social element. Solo Wordle is a personal challenge, a quiet battle of wits against the daily puzzle. It focuses on individual improvement and self-satisfaction upon solving the word. This makes it a relaxing daily routine for many.</p>
-                <p>wordle with friends, however, transforms this into a collective experience. It adds bragging rights, shared frustration, and mutual encouragement. The competitive aspect can push players to refine their strategies and become more efficient. Sharing results and discussing the puzzle becomes a daily ritual for many groups. For more insights on individual word puzzles, learn more about <a href="/play-wordle-with-friends-online">word challenges</a>.</p>
-                <p>The leaderboard function, often available in multiplayer versions of wordle with friends, heightens the stakes. Seeing your position relative to friends can be a powerful motivator. Some players enjoy the pressure of knowing others will see their score, driving them to aim for fewer guesses. This social accountability adds another layer of engagement.</p>
-
-                <h3>Leveraging Technology for Wordle With Friends</h3>
-                <p>Modern technology significantly enhances the wordle with friends experience. Various apps and websites offer integrated multiplayer features, allowing friends to create private groups and track scores automatically. These platforms often provide leaderboards, statistics, and even custom word creation tools.</p>
-                <p>Communication tools like messaging apps are crucial for real-time interaction among friends. Players can share their Wordle grids, discuss challenging words (after they have played), or simply cheer each other on. Some advanced tools even offer hints or analytics, though many groups prefer to stick to fair play rules. Utilizing these tools makes organizing wordle with friends challenges much easier.</p>
-                <table class="data-table">
+        <div class="togc-leaderboard-section" style="background-color: #f5fafd; padding: 25px; border-radius: 10px; box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.05); display: flex; flex-direction: column; gap: 15px;">
+            <h3 style="color: #1565c0; margin-bottom: 15px; font-size: 1.5em;"><i class="fa-solid fa-chart-bar" style="color: #1565c0;"></i> Leaderboard</h3>
+            <div id="leaderboard" style="overflow-x: auto;">
+                <table class="togc-leaderboard-table" style="width: 100%; border-collapse: collapse; text-align: left;">
                     <thead>
-                        <tr>
-                            <th>Feature</th>
-                            <th>Solo Wordle</th>
-                            <th>Wordle With Friends</th>
+                        <tr style="background-color: #bbdefb;">
+                            <th style="padding: 10px; border: 1px solid #e3f2fd; color: #1a237e;">Player</th>
+                            <th style="padding: 10px; border: 1px solid #e3f2fd; color: #1a237e;">Wins</th>
+                            <th style="padding: 10px; border: 1px solid #e3f2fd; color: #1a237e;">Losses</th>
+                            <th style="padding: 10px; border: 1px solid #e3f2fd; color: #1a237e;">Win Rate</th>
+                            <th style="padding: 10px; border: 1px solid #e3f2fd; color: #1a237e;">Avg. Guesses</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr>
-                            <td>Primary Goal</td>
-                            <td>Personal achievement</td>
-                            <td>Competition & social interaction</td>
-                        </tr>
-                        <tr>
-                            <td>Score Sharing</td>
-                            <td>Optional manual share</td>
-                            <td>Automated within groups</td>
-                        </tr>
-                        <tr>
-                            <td>Motivation</td>
-                            <td>Self-improvement</td>
-                            <td>Bragging rights, group standing</td>
-                        </tr>
-                        <tr>
-                            <td>Community</td>
-                            <td>Individual experience</td>
-                            <td>Built-in group dynamic</td>
-                        </tr>
+                    <tbody id="leaderboardBody">
+                        <!-- Leaderboard rows will be inserted here by JavaScript -->
                     </tbody>
                 </table>
-
-                <h3>The Evolution of Wordle With Friends</h3>
-                <p>Since its initial explosion in popularity, Wordle has spawned countless variations, and wordle with friends stands out as a natural progression. The demand for a social version was high, leading to the development of many online platforms catering to this need. Developers recognized the appeal of competitive word guessing.</p>
-                <p>This evolution includes features like custom puzzle creation, where one friend can challenge another with a unique word. Some versions allow for different word lengths or even timed challenges, adding new twists to the classic format. The community continually innovates, creating new ways to play wordle with friends.</p>
-                <p>The future of wordle with friends likely involves more integrated platforms with voice chat, video sharing, and sophisticated leaderboards. As mobile gaming continues to grow, we can expect even more seamless ways to connect and compete with friends, regardless of location. This constant innovation keeps the game fresh and engaging for its dedicated players.</p>
-
-                <h3>Tips for Keeping Wordle With Friends Engaging</h3>
-                <p>To ensure your wordle with friends group remains active and interested, consider introducing new elements periodically. You might organize themed weeks, focusing on words from a specific category, or introduce friendly wagers (e.g., loser buys coffee). These variations keep the game from becoming monotonous.</p>
-                <p>Regularly check in with group members about their preferences. Perhaps some prefer a daily game, while others might enjoy a weekly challenge. Adjusting the pace and style of play to suit everyone helps maintain high participation. Celebrating individual milestones, like a perfect score, also boosts morale within the wordle with friends community.</p>
-
-                <h3>Wordle With Friends as a Learning Tool</h3>
-                <p>Beyond entertainment, wordle with friends serves as an excellent educational resource. It encourages strategic thinking and problem-solving. Players must analyze clues, formulate hypotheses, and test them systematically. This process hones logical reasoning skills beneficial in many areas of life.</p>
-                <p>The game naturally expands vocabulary. Players encounter new words daily, and the context of the game helps in memorizing them. Understanding letter frequencies and common word structures also improves. Teachers and parents often use wordle with friends as a fun way to improve literacy and critical thinking among students.</p>
-
-                <h3>The Psychology Behind Wordle With Friends Addiction</h3>
-                <p>The appeal of wordle with friends stems from several psychological factors. The daily reset provides a fresh challenge, preventing burnout while building a habit. The immediate feedback loop (green, yellow, grey) is highly satisfying, reinforcing correct guesses and guiding further attempts. This constant feedback keeps players engaged.</p>
-                <p>The social comparison element fuels friendly competition. Seeing friends' scores creates a desire to improve and outdo others. This blend of personal achievement and social validation makes wordle with friends a highly addictive yet healthy pastime. It offers a low-stakes competitive outlet for many.</p>
-
-                <h3>Customizing Your Wordle With Friends Experience</h3>
-                <p>Many online versions of wordle with friends allow for significant customization. Players can often choose different word lengths, adjust the number of guesses, or even create their own unique word sets. This flexibility allows groups to tailor the challenge to their specific preferences and skill levels. Creating a custom puzzle adds a personal touch to the game.</p>
-                <p>Exploring these customization options can keep the game fresh and exciting for long-term players. Consider exploring different <a href="/create-custom-wordle-puzzles">game variations</a> to find one that offers the customization you desire.</p>
-
-                <h3>Maintaining Fair Play in Wordle With Friends</h3>
-                <p>Ensuring fair play is crucial for a positive wordle with friends experience. Groups often agree on rules to prevent cheating, such as not sharing answers or significant hints before everyone has completed the puzzle. Transparency in sharing results is also important to maintain trust and friendly competition.</p>
-                <p>Some groups use honor systems, relying on participants to play honestly. Others might use platforms that automatically manage scores and prevent premature answer revelation. Open communication about expectations and rules helps avoid misunderstandings and keeps the wordle with friends dynamic healthy and enjoyable for all members.</p>
-
-                <h3>Wordle With Friends Solver Assistant</h3>
-                <p>Welcome to the Wordle With Friends Solver Assistant! This tool helps you refine your guesses and improve your score when playing wordle with friends. Input the letters you know are in the word (green or yellow) and any letters you know are not in the word (grey). The solver will suggest possible five-letter words that match your criteria. This can be a useful aid for tricky puzzles.</p>
-                <p>This assistant offers a structured way to approach complex puzzles, especially when you are stuck. It provides a list of valid words based on your current knowledge, helping you narrow down the possibilities. Remember to use it to learn and improve, not just to get the answer. Understanding the logic behind the suggestions can improve your overall wordle with friends strategy.</p>
-                <div class="togc" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; padding: 20px; background-color: #e0f2f7; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-                    <div class="solver-controls" style="flex: 1 1 300px; padding: 15px; border-radius: 8px; background-color: #ffffff; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
-                        <h3 style="color:#007bff; margin-top: 0;">Solver Inputs <i class="fas fa-keyboard" style="color:#007bff;"></i></h3>
-                        <p style="margin-bottom: 10px; font-size: 0.9em; color: #555;">Enter what you know from your Wordle guesses:</p>
-                        <div style="margin-bottom: 15px;">
-                            <label for="greenLetters" style="display: block; margin-bottom: 5px; font-weight: bold; color: #333;">Green Letters (e.g., _R_SS):</label>
-                            <input type="text" id="greenLetters" placeholder="Enter known letters (use _ for unknown)" style="width: calc(100% - 20px); padding: 10px; border: 1px solid #cceeff; border-radius: 5px; font-size: 1em;">
-                        </div>
-                        <div style="margin-bottom: 15px;">
-                            <label for="yellowLetters" style="display: block; margin-bottom: 5px; font-weight: bold; color: #333;">Yellow Letters (e.g., A, E):</label>
-                            <input type="text" id="yellowLetters" placeholder="Letters present but not in position (comma separated)" style="width: calc(100% - 20px); padding: 10px; border: 1px solid #cceeff; border-radius: 5px; font-size: 1em;">
-                        </div>
-                        <div style="margin-bottom: 15px;">
-                            <label for="greyLetters" style="display: block; margin-bottom: 5px; font-weight: bold; color: #333;">Grey Letters (e.g., T, O):</label>
-                            <input type="text" id="greyLetters" placeholder="Letters not in the word (comma separated)" style="width: calc(100% - 20px); padding: 10px; border: 1px solid #cceeff; border-radius: 5px; font-size: 1em;">
-                        </div>
-                        <button id="solveButton" style="background-color: #007bff; color: white; padding: 12px 20px; border: none; border-radius: 5px; cursor: pointer; font-size: 1em; width: 100%; transition: background-color 0.3s ease;">Suggest Words <i class="fas fa-search" style="color:white;"></i></button>
-                        <div id="errorMessage" style="color: red; margin-top: 10px; text-align: center; font-size: 0.9em;"></div>
-                    </div>
-
-                    <div class="game-grid" style="flex: 1 1 250px; padding: 15px; border-radius: 8px; background-color: #ffffff; box-shadow: 0 2px 4px rgba(0,0,0,0.05); display: flex; flex-direction: column; align-items: center;">
-                        <h3 style="color:#007bff; margin-top: 0;">Wordle Grid Simulator <i class="fas fa-th-large" style="color:#007bff;"></i></h3>
-                        <p style="margin-bottom: 10px; font-size: 0.9em; color: #555;">Track your guesses visually:</p>
-                        <div id="wordleGrid" style="display: flex; flex-direction: column; gap: 5px; margin-bottom: 15px;">
-                            <!-- Rows will be added dynamically by JS -->
-                        </div>
-                        <div style="width: 100%;">
-                            <label for="addGuess" style="display: block; margin-bottom: 5px; font-weight: bold; color: #333;">Add Guess:</label>
-                            <input type="text" id="addGuess" maxlength="5" placeholder="Your guess (e.g., TRAIN)" style="width: calc(100% - 20px); padding: 10px; border: 1px solid #cceeff; border-radius: 5px; font-size: 1em; text-transform: uppercase;">
-                        </div>
-                        <div style="margin-top: 10px;">
-                            <label for="correctWord" style="display: block; margin-bottom: 5px; font-weight: bold; color: #333;">Correct Word (for simulation):</label>
-                            <input type="text" id="correctWord" maxlength="5" placeholder="Set word (optional)" style="width: calc(100% - 20px); padding: 10px; border: 1px solid #cceeff; border-radius: 5px; font-size: 1em; text-transform: uppercase;">
-                        </div>
-                        <button id="addGuessButton" style="background-color: #28a745; color: white; padding: 10px 15px; border: none; border-radius: 5px; cursor: pointer; font-size: 0.9em; margin-top: 15px; transition: background-color 0.3s ease;">Add to Grid <i class="fas fa-plus-circle" style="color:white;"></i></button>
-                    </div>
-
-                    <div class="results" style="flex: 1 1 300px; padding: 15px; border-radius: 8px; background-color: #ffffff; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
-                        <h3 style="color:#007bff; margin-top: 0;">Suggested Words <i class="fas fa-list-ul" style="color:#007bff;"></i></h3>
-                        <div id="wordSuggestions" style="max-height: 300px; overflow-y: auto; border: 1px solid #cceeff; border-radius: 5px; padding: 10px; background-color: #f8fcff;">
-                            <p style="text-align: center; color: #777;">Suggestions will appear here.</p>
-                        </div>
-                        <div style="margin-top: 15px;">
-                            <h3 style="color:#007bff;">Game Status <i class="fas fa-info-circle" style="color:#007bff;"></i></h3>
-                            <div id="gameStatus" style="padding: 10px; border: 1px solid #cceeff; border-radius: 5px; background-color: #f8fcff; color: #333; font-size: 0.9em;">
-                                <p>Guesses: 0/6</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <script>
-                    const ALL_WORDS = ["apple", "baker", "crane", "drain", "flame", "grape", "house", "light", "mouse", "night", "paint", "queen", "river", "space", "train", "unity", "vocal", "water", "youth", "zebra", "abide", "about", "above", "abuse", "adult", "after", "again", "agent", "agree", "ahead", "alarm", "album", "alert", "alike", "alive", "allow", "alone", "along", "alter", "among", "anger", "angle", "angry", "apart", "apple", "apply", "arena", "argue", "arise", "array", "aside", "asset", "audio", "audit", "avoid", "award", "aware", "badly", "baker", "basis", "basic", "beach", "begin", "below", "bench", "birth", "black", "blade", "blame", "blank", "blind", "block", "blood", "board", "boost", "booth", "bound", "brain", "brand", "bread", "break", "breed", "brief", "bring", "broad", "brown", "build", "bunch", "burst", "buyer", "cabin", "cable", "calm", "canal", "candy", "capry", "carbo", "carry", "catch", "cause", "cease", "chain", "chair", "chalk", "chaos", "chase", "cheap", "check", "cheek", "cheer", "chest", "chief", "child", "chill", "choke", "choir", "chunk", "cigar", "civil", "claim", "clash", "class", "clean", "clear", "clerk", "click", "cliff", "climb", "clock", "close", "cloth", "cloud", "coach", "coast", "cover", "crack", "craft", "crash", "cream", "crime", "cross", "crowd", "crown", "crude", "cycle", "daily", "dance", "death", "delay", "depth", "dirty", "dozen", "dream", "dress", "drink", "drive", "earth", "eager", "early", "empty", "enjoy", "enter", "entry", "equal", "error", "event", "every", "exact", "exist", "extra", "faith", "false", "fever", "fifth", "fifty", "fight", "final", "first", "fixed", "flash", "flesh", "float", "floor", "fluid", "focus", "force", "frame", "frank", "fresh", "front", "fully", "funny", "giant", "given", "globe", "grace", "grade", "grain", "grand", "grant", "grass", "great", "green", "gross", "group", "grown", "guard", "guess", "guest", "guide", "habit", "happy", "hardy", "harsh", "heavy", "hello", "hence", "house", "human", "ideal", "image", "imply", "index", "inner", "input", "issue", "joint", "judge", "knife", "large", "later", "laugh", "layer", "learn", "lease", "leave", "legal", "level", "light", "limit", "local", "logic", "loose", "lower", "loyal", "lucky", "lunch", "major", "maker", "male", "maple", "march", "match", "maxim", "maybe", "means", "metal", "meter", "micro", "midst", "might", "minor", "minus", "mixed", "model", "money", "month", "moral", "motor", "mount", "mouth", "movie", "multi", "music", "naked", "nasty", "nerve", "never", "newly", "niche", "night", "noise", "north", "novel", "nurse", "occur", "ocean", "offer", "order", "other", "ought", "outer", "owner", "oxide", "panel", "panic", "paper", "party", "patch", "pause", "peace", "phase", "phone", "photo", "piano", "piece", "pilot", "pitch", "place", "plain", "plane", "plant", "plate", "point", "pound", "power", "press", "price", "pride", "prime", "print", "prior", "prize", "proof", "proud", "prove", "quick", "quiet", "quite", "radio", "raise", "range", "rapid", "ratio", "reach", "react", "ready", "refer", "relax", "reply", "rival", "river", "rough", "round", "route", "royal", "rural", "salad", "sales", "salty", "scale", "scene", "scope", "score", "sense", "serve", "seven", "shall", "share", "sharp", "sheet", "shelf", "shell", "shift", "shine", "shirt", "shock", "shoot", "short", "shown", "sight", "sigma", "silly", "since", "sixth", "sixty", "sized", "skill", "sleep", "slice", "slide", "small", "smart", "smell", "smile", "smoke", "solid", "solve", "sorry", "sound", "south", "space", "spare", "spark", "speak", "speed", "spend", "spine", "sport", "spray", "stage", "stand", "start", "state", "steam", "steel", "stick", "still", "stock", "stone", "store", "storm", "story", "strip", "study", "stuff", "style", "sugar", "suite", "super", "sweet", "table", "taste", "teach", "teddy", "teeth", "tempo", "tenth", "thank", "theme", "there", "these", "thick", "thing", "think", "third", "those", "three", "throw", "tight", "times", "tires", "title", "today", "topic", "total", "touch", "tough", "trace", "track", "trade", "trail", "train", "trait", "treat", "trend", "trial", "tribe", "trick", "troop", "truck", "truly", "trust", "truth", "twice", "under", "union", "unity", "until", "upper", "urban", "usage", "usual", "value", "video", "virus", "visit", "vital", "voice", "voter", "waste", "watch", "water", "weary", "wheat", "wheel", "where", "while", "white", "whole", "whose", "widely", "width", "woman", "women", "world", "worry", "worth", "would", "wound", "write", "wrong", "yield", "young", "yours", "youth", "zealot", "zeros", "zesty", "zones", "aback", "abase", "abate", "abbey", "abbot", "abhor", "abide", "abled", "abode", "abort", "about", "above", "abuse", "abyss", "aches", "acing", "acked", "acres", "acrid", "acted", "actor", "acute", "adage", "adapt", "added", "adder", "adept", "adios", "adopt", "adore", "adorn", "adult", "afoot", "after", "again", "agate", "aging", "agony", "agree", "ahead", "alarm", "algae", "alias", "alibi", "alien", "align", "alike", "alive", "allay", "alley", "allot", "allow", "alloy", "aloft", "alone", "along", "aloof", "aloud", "altar", "alter", "amass", "amaze", "amber", "amble", "ameba", "amend", "amino", "amiss", "among", "amour", "amply", "amuse", "angel", "anger", "angle", "angry", "anime", "ankle", "annex", "annoy", "annul", "anode", "antic", "anvil", "aorta", "apace", "apart", "apert", "aphid", "aping", "apnea", "apple", "apply", "apron", "aptly", "arbor", "ardor", "areal", "areas", "arena", "argon", "argot", "argue", "arise", "armor", "aroma", "arose", "array", "arrow", "arson", "artsy", "ashes", "aside", "asked", "askew", "aspen", "aspic", "assay", "asset", "atlas", "atoll", "atoms", "atone", "attic", "audio", "audit", "aught", "aunts", "aurae", "avail", "avast", "avers", "avert", "avian", "avoid", "await", "awake", "award", "aware", "awash", "awful", "awing", "awoke", "axiom", "axing", "aztec", "azure", "bacon", "badge", "badly", "bagel", "baggy", "bails", "baker", "balls", "balmy", "bands", "bangs", "banks", "bared", "barer", "bares", "barge", "barns", "baron", "basal", "bases", "basic", "basil", "basin", "basis", "basks", "baste", "batch", "bates", "bathe", "baths", "baton", "batty", "bawdy", "beach", "beady", "beans", "beard", "bears", "beast", "beats", "beaux", "bebop", "becks", "beech", "beefy", "beeps", "beers", "began", "begat", "begin", "begun", "being", "belay", "belch", "below", "bells", "belly", "bemoan", "bench", "bends", "bendy", "bento", "beret", "bergs", "berry", "bides", "bided", "bigot", "bikes", "biker", "bills", "binds", "bingo", "biped", "birch", "birds", "birth", "bison", "bites", "bitty", "black", "blade", "blame", "bland", "blank", "blare", "blast", "blaze", "bleak", "bleat", "bleed", "bleep", "blend", "bless", "blest", "blimp", "blind", "blink", "bliss", "blitz", "bloat", "block", "blogs", "blood", "bloom", "blots", "blown", "blows", "blued", "blues", "bluff", "blunt", "blurb", "blurt", "blush", "board", "boars", "boats", "boded", "bodes", "boggy", "bogie", "boils", "boles", "bolls", "bolts", "bonds", "bones", "boney", "bongo", "bony", "books", "booms", "boost", "booth", "boots", "booty", "booze", "borax", "bored", "bores", "borne", "bosom", "boson", "bossy", "botch", "bough", "bound", "bouts", "bowel", "bower", "bowls", "boxer", "boxes", "brace", "brags", "braid", "brain", "brake", "brand", "brash", "brass", "brave", "bravo", "brawl", "brawn", "bread", "break", "breed", "bribe", "brick", "bride", "brief", "brier", "brine", "bring", "brink", "briny", "brisk", "broad", "broil", "broke", "broma", "bronc", "brood", "brook", "broom", "broth", "brown", "brows", "brush", "brute", "bucks", "buffs", "buggy", "build", "bulge", "bulgy", "bulks", "bulky", "bulls", "bully", "bumbl", "bumps", "bumpy", "bunch", "bungs", "bunks", "bunny", "bunts", "buoys", "burgs", "burly", "burns", "burnt", "burps", "burro", "burst", "busby", "bused", "busgy", "bushy", "busts", "busty", "butch", "butes", "butyl", "buxom", "buyer", "bylaw", "byres", "byway", "cabal", "cabby", "cabin", "cable", "cacao", "cache", "cacti", "caddy", "cadet", "cadre", "caged", "cages", "cagey", "cairn", "caked", "cakes", "calfs", "calix", "calks", "calla", "calls", "calms", "calve", "camel", "camps", "canal", "candy", "caned", "canes", "canny", "canoe", "canon", "caped", "caper", "capes", "capon", "carat", "cards", "cared", "cares", "cargo", "carol", "carry", "carts", "carve", "cased", "cases", "caste", "casts", "catch", "cater", "caulk", "cause", "caved", "caves", "cavil", "cease", "cecal", "cedar", "ceded", "cedes", "celli", "cello", "cells", "cents", "ceres", "chafe", "chaff", "chain", "chair", "chalk", "champ", "chant", "chaos", "chaps", "charm", "chars", "chart", "chase", "chasm", "cheap", "cheat", "check", "cheek", "cheep", "cheer", "chefs", "chess", "chest", "chews", "chewy", "chick", "chide", "chief", "child", "chile", "chill", "chime", "chins", "chips", "chive", "chock", "choir", "choke", "chomp", "chops", "chord", "chore", "chose", "chows", "chuck", "chugs", "chump", "chunk", "churn", "chute", "cider", "cigar", "cilia", "cindy", "cinch", "circa", "cisco", "cited", "cites", "civic", "civil", "clack", "claim", "clamp", "clams", "clang", "clank", "clash", "clasp", "class", "claus", "claws", "clean", "clear", "cleat", "clefs", "cleft", "clerk", "click", "cliff", "climb", "clime", "cling", "clink", "clips", "cloak", "clock", "clods", "clogs", "clone", "close", "cloth", "cloud", "clout", "clove", "clown", "cloys", "clubs", "cluck", "clued", "clues", "clump", "clung", "coast", "cobra", "cocks", "cocoa", "codex", "coeds", "coils", "coins", "cokes", "colic", "colon", "color", "comas", "combo", "comes", "comet", "comfy", "comic", "comma", "conch", "cones", "conga", "conic", "conks", "cooed", "cooks", "cools", "coops", "coots", "coped", "copes", "copra", "copse", "coral", "cords", "cored", "cores", "corks", "corns", "corny", "corps", "costa", "costs", "couch", "cough", "could", "count", "coupe", "court", "coven", "cover", "covet", "cowed", "cower", "cowls", "coxed", "coxes", "coyly", "crabs", "crack", "craft", "crags", "cramp", "crams", "crane", "crank", "crash", "crass", "crate", "crave", "crawl", "craze", "crazy", "creak", "cream", "credo", "creed", "creek", "creel", "creep", "crepe", "crept", "cress", "crest", "crete", "cried", "cries", "crime", "crimp", "crisp", "croak", "crock", "crone", "crony", "crook", "cross", "croup", "crowd", "crown", "crude", "cruel", "crumb", "crump", "crush", "crust", "crypt", "cubed", "cubes", "cubic", "cuffs", "cuing", "culls", "cults", "cumin", "cupid", "curbs", "curds", "cured", "cures", "curio", "curls", "curly", "curry", "curse", "curve", "curvy", "cushy", "cuter", "cutie", "cutup", "cycle", "cynic", "daddy", "daily", "dairy", "daisy", "dales", "dames", "damp", "damps", "dance", "dandy", "dared", "dares", "darks", "darns", "darts", "dated", "dates", "datum", "daunt", "dawns", "dazed", "dazes", "deals", "dealt", "deans", "dears", "death", "debar", "debit", "debts", "debug", "debut", "decaf", "decal", "decay", "decks", "decor", "decoy", "deems", "deeps", "defer", "deify", "deign", "deity", "delay", "delft", "delis", "dells", "delta", "delve", "demon", "demur", "denim", "dense", "dents", "depot", "depth", "derby", "detox", "deuce", "devil", "dewar", "dials", "diary", "dicey", "diced", "dices", "digit", "dikes", "dilly", "dimes", "diner", "dingo", "dings", "dingy", "dinks", "dinky", "dinos", "diode", "dippy", "direr", "dirge", "dirts", "dirty", "disco", "discs", "dishy", "disks", "ditch", "ditzy", "divan", "divas", "dived", "diver", "dives", "divot", "dizzy", "docks", "dodge", "dodgy", "dogma", "doily", "doing", "dolls", "dolly", "domed", "domes", "donor", "donut", "dooms", "doors", "dope", "doped", "dopes", "dopey", "dosed", "doses", "dotty", "doubt", "dough", "douse", "dowel", "downs", "downy", "dozen", "dozer", "drabs", "drain", "drake", "drama", "drank", "drape", "drawl", "drawn", "draws", "dread", "dream", "drear", "dregs", "dress", "dried", "drier", "dries", "drift", "drill", "drink", "drips", "drive", "droll", "drone", "drool", "droop", "drops", "dross", "drove", "drown", "drubs", "drugs", "druid", "drums", "drunk", "dryer", "dryly", "duals", "duchy", "ducks", "ducky", "duels", "duets", "duffs", "dummy", "dumps", "dumpy", "dunce", "dunes", "dungs", "dunks", "dusts", "dusty", "dutch", "duvet", "dwarf", "dwell", "dwelt", "dyads", "dying", "eager", "eagle", "earls", "early", "earns", "earth", "eased", "easel", "eases", "eaten", "eater", "ebony", "eclat", "edema", "edged", "edges", "edict", "eject", "elbow", "elder", "elect", "elegy", "elfin", "elite", "elope", "elude", "elves", "emcee", "emery", "emit", "emote", "empty", "enact", "ended", "endow", "enema", "enemy", "enjoy", "ennui", "enter", "entry", "envoy", "epoch", "epoxy", "equal", "equip", "erase", "erect", "erode", "error", "erupt", "essay", "ester", "ether", "ethic", "ethos", "eugen", "eject", "evade", "even", "evens", "event", "every", "evict", "evoke", "exact", "exalt", "excel", "exert", "exile", "exist", "expel", "extol", "extra", "exude", "exult", "eying", "fable", "faced", "faces", "facet", "facts", "faded", "fades", "fails", "faint", "fair", "fairs", "faith", "falls", "false", "famed", "fancy", "fangs", "farce", "fared", "fares", "farms", "fasts", "fatal", "fated", "fates", "fatty", "fault", "fauna", "favor", "fazed", "fazes", "feast", "feats", "feces", "feeds", "feels", "feign", "fells", "felon", "femur", "fence", "fends", "feral", "ferry", "fetal", "fetch", "fetid", "fetus", "fever", "fewer", "fiber", "fibre", "ficus", "fiefs", "field", "fiend", "fiery", "fifth", "fifty", "fight", "filet", "filed", "files", "fills", "filly", "films", "filth", "final", "finch", "finds", "fined", "finer", "fines", "finks", "finny", "fiord", "fired", "fires", "firms", "first", "fishy", "fists", "fitly", "fixed", "fixer", "fixes", "fizzy", "fjord", "flack", "flags", "flail", "flair", "flake", "flaky", "flame", "flank", "flaps", "flare", "flash", "flask", "flats", "flaws", "fleas", "fleck", "flees", "fleet", "flesh", "flick", "flier", "flies", "fling", "flint", "flips", "flirt", "float", "flock", "flops", "flora", "floss", "flour", "flout", "flown", "flows", "fluid", "fluke", "fluky", "flume", "flung", "flush", "flute", "flyer", "foals", "foams", "foamy", "focal", "focus", "foggy", "foils", "folds", "folks", "folly", "fonts", "foods", "fools", "foots", "foray", "force", "forge", "forgo", "forks", "forms", "forte", "forth", "forts", "forty", "forum", "fossa", "fouls", "found", "fount", "fours", "fowls", "foxed", "foxes", "foyer", "frail", "frame", "frank", "fraud", "freak", "freed", "frees", "fresh", "friar", "fried", "fries", "frill", "fringe", "frisk", "frock", "frogs", "front", "frost", "froth", "frown", "froze", "fruit", "fuels", "fully", "fumed", "fumes", "fungi", "funky", "funny", "furls", "furry", "fused", "fuses", "fussy", "fuzzy", "gable", "gabby", "gaffe", "gains", "gales", "galls", "gamay", "gamed", "games", "gamma", "gangs", "gaped", "gapes", "gassy", "gated", "gates", "gator", "gaudy", "gauge", "gaunt", "gauze", "gavel", "gawky", "gazed", "gazes", "gears", "gecko", "geese", "genes", "genie", "genus", "germs", "ghost", "ghoul", "giant", "giddy", "gifts", "gilds", "gills", "gimpy", "gipsy", "girds", "girls", "given", "giver", "gives", "glade", "glads", "gland", "glare", "glass", "glaze", "gleam", "glean", "glide", "glint", "gloat", "globe", "gloom", "glory", "gloss", "glove", "glows", "glued", "glues", "glyph", "gnash", "gnats", "gnome", "goads", "goals", "goats", "godly", "going", "golds", "gonad", "gongs", "gonna", "goods", "goody", "gooey", "goofs", "goofy", "goose", "gorge", "goths", "gouda", "gourd", "grams", "grand", "grans", "grape", "graph", "grasp", "grass", "grate", "grave", "gravy", "graze", "great", "greed", "green", "greet", "grief", "grill", "grime", "grimy", "grind", "grins", "gripe", "grips", "grist", "groan", "groin", "groom", "gross", "group", "grout", "grove", "growl", "grown", "grows", "grubs", "gruel", "gruff", "grunt", "guard", "guava", "guess", "guest", "guide", "guild", "guile", "guilt", "guise", "gulch", "gulls", "gully", "gulps", "gummy", "gunny", "gusto", "gusty", "gutsy", "gypsy", "habit", "hacks", "hails", "hairs", "hairy", "haled", "hales", "halls", "halos", "halts", "hands", "handy", "hangs", "hardy", "hares", "harks", "harms", "harps", "harts", "harsh", "hasps", "haste", "hasty", "hatch", "hated", "hater", "hates", "hauls", "haunt", "haven", "haves", "havoc", "hawks", "hazel", "heads", "heady", "heals", "heaps", "heard", "hears", "heart", "heath", "heats", "heave", "heavy", "hedge", "heeds", "heels", "hefty", "heigh", "helix", "hello", "hells", "helps", "hence", "herbs", "herds", "heres", "heron", "hicks", "hides", "hiker", "hiked", "hikes", "hills", "hilts", "hind", "hinds", "hinge", "hints", "hippo", "hires", "hired", "hiss", "hived", "hives", "hoard", "hoars", "hobby", "hobos", "hocks", "hogan", "hoist", "holds", "holes", "holey", "holly", "homed", "homes", "honey", "honks", "honor", "hoods", "hooky", "hoops", "hopes", "horde", "horns", "horny", "horse", "hosed", "hoses", "hosts", "hotel", "hotly", "hound", "hours", "house", "hover", "howdy", "howls", "hulls", "human", "humid", "humor", "hump", "humps", "hunch", "hunks", "hunky", "hunts", "hurls", "hurry", "hurts", "husky", "hussy", "hydra", "hyena", "hymns", "hyped", "hypes", "hyper", "icing", "icons", "ideal", "idiom", "idiot", "idled", "idles", "igloo", "iliac", "image", "imply", "inane", "incur", "index", "inept", "inert", "infer", "ingot", "inked", "inlet", "inner", "input", "inset", "inter", "intro", "inure", "ioctl", "ionic", "irate", "irony", "isles", "islet", "issue", "itchy", "items", "ivies", "ivory", "jaded", "jades", "jails", "jambs", "japan", "japed", "japes", "jaunt", "jawed", "jeans", "jelly", "jerks", "jerky", "jests", "jetty", "jewel", "jibes", "jiffy", "jihad", "jilts", "jinks", "jolly", "jolts", "joule", "joust", "joyed", "judge", "juice", "juicy", "jumbo", "jumps", "jumpy", "junks", "junky", "junto", "juror", "karma", "kayak", "kazoo", "kebab", "kempt", "ketch", "keyed", "khaki", "kicks", "kills", "kilts", "kinds", "kings", "kinks", "kinky", "kiosk", "kites", "kitty", "knack", "knave", "knead", "kneed", "kneel", "knelt", "knife", "knits", "knobs", "knock", "knots", "known", "knows", "koala", "kooky", "krill", "label", "labor", "laced", "laces", "lacks", "laden", "lager", "lairs", "lakes", "lambs", "lamed", "lames", "lamps", "lands", "lanky", "lapis", "lapse", "lards", "large", "larks", "larva", "laser", "lasso", "lasts", "latch", "later", "laths", "latte", "laugh", "layer", "leads", "leafs", "leafy", "leaks", "leaky", "leans", "leaps", "leapt", "learn", "lease", "least", "leave", "ledge", "leech", "leeks", "legal", "leggy", "lemon", "lemur", "lends", "lense", "leper", "level", "lever", "liars", "libel", "licks", "lidos", "lieve", "light", "liked", "liken", "likes", "limbs", "lime", "limed", "limes", "limit", "limps", "lined", "linen", "liner", "lines", "lingo", "links", "lions", "lipid", "lists", "liter", "lites", "lived", "liver", "lives", "livid", "loads", "loafs", "loamy", "loans", "loath", "lobby", "lobed", "lobes", "local", "locks", "locus", "lodge", "loess", "lofty", "logic", "login", "logos", "loins", "lolls", "loner", "longs", "looks", "looms", "loose", "loops", "loopy", "loots", "lords", "lorry", "loser", "loses", "loses", "lotsa", "lotus", "louse", "lousy", "loved", "lover", "loves", "lowed", "lower", "loyal", "lucid", "lucky", "lucre", "lulls", "lumen", "lumps", "lumpy", "lunar", "lunch", "lunge", "lungs", "lurch", "lured", "lures", "lurid", "lusty", "lying", "lymph", "lyres", "lyric", "macaw", "macho", "macro", "madam", "madly", "mafia", "magic", "magma", "maize", "major", "maker", "makes", "males", "malls", "malts", "malty", "mambo", "manes", "manga", "mango", "mania", "manic", "manly", "manna", "manor", "manse", "maple", "march", "mares", "marks", "marry", "marsh", "marts", "masks", "mason", "massy", "match", "mated", "mates", "maths", "matte", "mauve", "maxed", "maxes", "maxim", "maybe", "mayor", "meals", "meant", "meats", "meaty", "medal", "media", "medic", "meets", "melon", "melts", "menus", "mercy", "merge", "merit", "merry", "messy", "metal", "meter", "metro", "micro", "midst", "might", "mikes", "miles", "milks", "milky", "mills", "mimic", "mince", "minds", "mined", "miner", "mines", "minim", "minor", "minty", "minus", "mirth", "miser", "missy", "misty", "mites", "mitts", "mixed", "mixer", "mixes", "moans", "moats", "mocha", "mocks", "modal", "model", "modem", "modes", "mogul", "moist", "molar", "molds", "moldy", "moles", "money", "month", "mooch", "moody", "moons", "moors", "moose", "moots", "moral", "morel", "morns", "morph", "mosey", "mossy", "motel", "motif", "motor", "mound", "mount", "mourn", "mouse", "mouth", "moved", "mover", "moves", "movie", "mowed", "mower", "mucks", "mucky", "mucus", "muddy", "muffs", "mufti", "muggy", "mulch", "mule", "mulls", "multi", "mumps", "munch", "mural", "murky", "mused", "muses", "mushy", "music", "musky", "musty", "muted", "mutes", "mutts", "myrrh", "nabob", "nails", "nasty", "natal", "naval", "navel", "neigh", "nerdy", "nerve", "nervy", "nests", "never", "newly", "nicer", "niche", "nicks", "niece", "nifty", "night", "nimbi", "ninth", "nippy", "noble", "nobly", "nodes", "noise", "noisy", "nomad", "nonce", "nonny", "nooks", "noose", "north", "nosey", "notch", "notes", "nouns", "novel", "nudes", "nudge", "nulls", "numbs", "nurse", "nylon", "nymph", "oaken", "oases", "oasis", "oaten", "oaths", "obese", "occur", "ocean", "octal", "octet", "oddly", "offal", "offed", "often", "ogres", "oiled", "olden", "older", "oleic", "olive", "omega", "omens", "omits", "onion", "onset", "oozed", "oozes", "opals", "opens", "opera", "opted", "optic", "orate", "orbed", "orbit", "order", "organ", "other", "otter", "ought", "ounce", "outer", "outgo", "outre", "ovals", "ovary", "ovate", "overt", "owing", "owlet", "owned", "owner", "oxide", "ozone", "paced", "paces", "paddy", "pagan", "paged", "pages", "pails", "pains", "paint", "pairs", "pale", "paled", "paler", "pales", "palls", "palms", "palmy", "palsy", "panda", "panel", "panic", "pansy", "pants", "papal", "paper", "parch", "pared", "pares", "parka", "parks", "parry", "parse", "parts", "party", "pasta", "paste", "pasty", "patch", "paths", "patio", "patsy", "pause", "paved", "paves", "pawed", "pawns", "peace", "peach", "peaks", "peaky", "pearl", "pecan", "pecks", "pedal", "peeks", "peels", "peeps", "peers", "pelts", "penny", "perch", "peril", "perks", "perky", "perms", "pesky", "pests", "petal", "phase", "phone", "phony", "photo", "piano", "picks", "picky", "piece", "piers", "piety", "piggy", "pikes", "piled", "piles", "pills", "pilot", "pimps", "pinch", "pined", "pines", "pinky", "pints", "pious", "pipes", "piped", "piper", "pipet", "pique", "pitch", "pithy", "pivot", "pixel", "pixie", "pizza", "place", "plaid", "plain", "plans", "plant", "plate", "plays", "plead", "pleas", "pleat", "ploys", "pluck", "plugs", "plumb", "plume", "plump", "plums", "plunk", "plush", "poach", "poems", "poesy", "poets", "point", "poise", "polar", "poles", "polls", "polyp", "ponce", "ponds", "pones", "pooch", "pools", "poops", "popes", "poppy", "porch", "pores", "ports", "posed", "poser", "poses", "posse", "posts", "potty", "pouch", "pound", "pours", "pouty", "power", "prank", "praps", "prays", "preen", "preps", "press", "preys", "price", "prick", "pride", "pried", "pries", "prime", "primp", "print", "prior", "prism", "privy", "prize", "probe", "prods", "prone", "prong", "proof", "props", "proud", "prove", "prowl", "proxy", "prude", "prune", "psalm", "pubic", "puffs", "puffy", "pulpy", "pulse", "punch", "punks", "punky", "punts", "puree", "purge", "purse", "pushy", "putts", "pygmy", "pylon", "quack", "quads", "quail", "quake", "qualm", "quark", "quart", "quash", "quasi", "queen", "quell", "query", "quest", "queue", "quick", "quids", "quiet", "quill", "quilt", "quips", "quire", "quirk", "quirt", "quite", "quits", "quota", "quote", "quoth", "rabid", "raced", "racer", "races", "racks", "radio", "radon", "rafts", "ragged", "rails", "rains", "rainy", "raise", "rajah", "raked", "rakes", "rally", "ramps", "ranch", "randy", "range", "ranks", "rants", "raped", "rapes", "rapid", "rarer", "raspy", "rated", "rates", "ratio", "rattl", "raved", "raven", "raves", "rawly", "rayed", "razed", "razes", "reach", "react", "reads", "ready", "reafs", "realm", "reams", "reaps", "rearm", "rebel", "rebus", "rebut", "recap", "recut", "reeds", "reedy", "reefs", "reeks", "reels", "refer", "refit", "regal", "reign", "reins", "relax", "relay", "relic", "remit", "renal", "rends", "renew", "rents", "repay", "repel", "reply", "repro", "rerun", "reset", "retch", "retro", "retry", "reuse", "revel", "revue", "rewed", "rhino", "rhyme", "ribsy", "ricer", "rices", "rider", "rides", "ridge", "rife", "riffs", "rifle", "right", "rigid", "rigor", "riles", "riled", "rille", "rills", "rimes", "rinds", "rings", "rinse", "riots", "ripen", "riper", "risen", "riser", "rises", "risky", "rites", "rival", "river", "rivet", "roach", "roads",
-<footer class="site-footer">
-  <div class="container">
-    
-    <div class="footer-top">
-      <div class="footer-logo">
-        <h3>Wordle With Friends</h3>
-        <p>Your trusted source for Wordle With Friends information.</p>
-      </div>
-      <div class="footer-contact">
-        <h4>Contact Us</h4>
-        <p>Email: <a href="mailto:info@wordle-with-friends.com">info@wordle-with-friends.com</a></p>
-      </div>
+            </div>
+            <p style="color: #555; font-size: 0.9em; text-align: center; margin-top: 10px;">*Sorted by Win Rate (highest first), then Avg. Guesses (lowest first).</p>
+        </div>
     </div>
+</div>
 
-     <footer class="site-footer">
-      <div class="container">
-        
- <div class="footer-top">
-   <div class="footer-logo">
-     <h3>Wordle With Friends</h3>
-     <p>Your trusted source for Wordle With Friends information.</p>
-   </div>
-   <div class="footer-contact">
-     <h4>Contact Us</h4>
-     <p>Email: info@wordle-with-friends.com</p>
-   </div>
- </div>
- <div class="footer-links">
-   <h4>Quick Links</h4>
-   <ul>
-     <li><a href="/">Wordle With Friends</a></li><li><a href="/play-wordle-with-friends-online">Play Wordle With Friends Online</a></li><li><a href="/create-custom-wordle-puzzles">Create Custom Wordle Puzzles</a></li><li><a href="/wordle-with-friends-solver-tool">Wordle With Friends Solver Tool</a></li><li><a href="/wordle-with-friends-statistics-tracker">Wordle With Friends Statistics Tracker</a></li><li><a href="/wordle-with-friends-for-kids">Wordle With Friends For Kids</a></li><li><a href="/about-us">About Us</a></li><li><a href="/contact-us">Contact Us</a></li><li><a href="/privacy-policy">Privacy Policy</a></li><li><a href="/terms-and-conditions">Terms And Conditions</a></li><li><a href="/disclaimer">Disclaimer</a></li>
-   </ul>
- </div>
- <div class="footer-bottom">
-   <p>&copy; 2025 <a href="https://wordlewithfriends.vercel.app" target="_blank" >Wordle With Friends</a>. All rights reserved.</p>
- </div>
-      </div>
-    </footer>
-    <button id="scroll-top" class="scroll-top"><i class="fa fa-arrow-up"></i></button>
-    <script src="/js/main.js"></script>
+<script>
+    let players = JSON.parse(localStorage.getItem('wordleWithFriendsPlayers')) || [];
 
-</body>
-</html>
+    function savePlayers() {
+        localStorage.setItem('wordleWithFriendsPlayers', JSON.stringify(players));
+    }
+
+    function addGameResult() {
+        const playerNameInput = document.getElementById('playerName');
+        const guessesInput = document.getElementById('guesses');
+        const outcomeWin = document.querySelector('input[name="outcome"][value="win"]').checked;
+        const errorMessage = document.getElementById('errorMessage');
+
+        const name = playerNameInput.value.trim();
+        const guesses = parseInt(guessesInput.value);
+
+        errorMessage.textContent = ''; // Clear previous errors
+
+        if (!name) {
+            errorMessage.textContent = 'Please enter a player name.';
+            return;
+        }
+
+        let player = players.find(p => p.name.toLowerCase() === name.toLowerCase());
+
+        if (!player) {
+            player = { name: name, wins: 0, losses: 0, totalGuesses: 0, gamesWon: 0 };
+            players.push(player);
+        }
+
+        if (outcomeWin) {
+            if (isNaN(guesses) || guesses < 1 || guesses > 6) {
+                errorMessage.textContent = 'For a win, guesses must be between 1 and 6.';
+                return;
+            }
+            player.wins++;
+            player.totalGuesses += guesses;
+            player.gamesWon++;
+        } else {
+            player.losses++;
+            // Guesses for a loss are not tracked for average, as they are not valid attempts
+        }
+
+        savePlayers();
+        displayLeaderboard();
+        playerNameInput.value = ''; // Clear input fields after adding
+        guessesInput.value = '';
+        document.querySelector('input[name="outcome"][value="win"]').checked = true; // Reset to win
+    }
+
+    function displayLeaderboard() {
+        const leaderboardBody = document.getElementById('leaderboardBody');
+        leaderboardBody.innerHTML = ''; // Clear existing rows
+
+        // Sort players: highest win rate first, then lowest average guesses for tie-breaking
+        const sortedPlayers = [...players].sort((a, b) => {
+            const winRateA = (a.wins / (a.wins + a.losses)) || 0;
+            const winRateB = (b.wins / (b.wins + b.losses)) || 0;
+            if (winRateB !== winRateA) {
+                return winRateB - winRateA; // Sort by win rate descending
+            }
+
+            const avgGuessesA = a.gamesWon > 0 ? (a.totalGuesses / a.gamesWon) : Infinity;
+            const avgGuessesB = b.gamesWon > 0 ? (b.totalGuesses / b.gamesWon) : Infinity;
+            return avgGuessesA - avgGuessesB; // Sort by average guesses ascending
+        });
+
+        if (sortedPlayers.length === 0) {
+            const noDataRow = document.createElement('tr');
+            noDataRow.innerHTML = `<td colspan="5" style="text-align: center; padding: 10px; color: #757575;">No game results yet. Add a player!</td>`;
+            leaderboardBody.appendChild(noDataRow);
+            return;
+        }
+
+        sortedPlayers.forEach(player => {
+            const totalGames = player.wins + player.losses;
+            const winRate = totalGames > 0 ? ((player.wins / totalGames) * 100).toFixed(1) + '%' : '0.0%';
+            const avgGuesses = player.gamesWon > 0 ? (player.totalGuesses / player.gamesWon).toFixed(2) : 'N/A';
+
+            const row = document.createElement('tr');
+            row.style.backgroundColor = sortedPlayers.indexOf(player) % 2 === 0 ? '#e3f2fd' : '#ffffff';
+            row.style.color = '#424242';
+            row.innerHTML = `
+                <td style="padding: 10px; border: 1px solid #e3f2fd;">${player.name}</td>
+                <td style="padding: 10px; border: 1px solid #e3f2fd;">${player.wins}</td>
+                <td style="padding: 10px; border: 1px solid #e3f2fd;">${player.losses}</td>
+                <td style="padding: 10px; border: 1px solid #e3f2fd;">${winRate}</td>
+                <td style="padding: 10px; border: 1px solid #e3f2fd;">${avgGuesses}</td>
+            `;
+            leaderboardBody.appendChild(row);
+        });
+    }
+
+    function resetData() {
+        if (confirm('Are you sure you want to reset all player data? This cannot be undone.')) {
+            players = [];
+            savePlayers();
+            displayLeaderboard();
+        }
+    }
+
+    // Initial display when page loads
+    document.addEventListener('DOMContentLoaded', displayLeaderboard);
+</script>
+
+<h2 class="section-title">Customizing Your Wordle With Friends Experience</h2><p>The appeal of wordle with friends is significantly broadened by the ability to customize your game. Many platforms allow you to create unique word puzzles. This means you can select specific words, perhaps those with personal significance to your friend group, making the game even more memorable. Custom puzzles add a fresh layer of engagement beyond the standard daily challenge.</p><p>Beyond choosing words, customization options might include adjusting the number of letters in the word, the number of guesses allowed, or even setting a time limit for each turn. These variations let you tailor the difficulty and style of play to suit everyone involved. The flexibility ensures that wordle with friends remains fresh and enjoyable for all players, regardless of their skill level.</p><h3>The Educational Benefits of Wordle With Friends</h3><p>Playing wordle with friends is not only entertaining but also offers notable educational advantages. Regularly engaging with the game helps expand vocabulary. Players encounter new words and reinforce their knowledge of existing ones through repeated exposure and guessing. This natural learning environment makes word acquisition enjoyable and effective.</p><p>Moreover, the game sharpens critical thinking and problem-solving skills. Each guess requires careful analysis of letter positions and colors to deduce the correct word. Players learn to think strategically, test hypotheses, and adapt their approach based on new information. This cognitive exercise makes wordle with friends a valuable mental workout for all ages.</p><h2>Troubleshooting Common Issues with Wordle With Friends</h2><p>While playing wordle with friends is generally smooth, you might occasionally encounter minor issues. One common problem is game synchronization delays, where one player's board updates slower than another's. Checking your internet connection is often the first step to resolve this. Ensuring both players have a stable connection can prevent most sync issues.</p><p>Another frequent concern is incorrect scoring or a discrepancy in leaderboard rankings. If this happens, verify that all players are using the same version of the game or platform. Sometimes, clearing your browser's cache or trying a different browser can resolve display problems. Reporting persistent bugs to the game's support team also helps improve the overall experience for wordle with friends players.</p><h3>Future Developments for Wordle With Friends</h3><p>The landscape of wordle with friends is constantly evolving, with developers seeking to introduce new features and enhancements. We can anticipate more sophisticated real-time multiplayer functionalities, allowing for even more seamless interaction. This could include integrated voice chat or advanced spectator modes for larger groups.</p><p>Expect further personalization options, such as customizable avatars, unique game board themes, or achievements. There will also be efforts to foster greater community engagement. Developers are exploring ways to implement in-game tournaments or public leaderboards to expand the competitive aspect beyond personal friend groups. These innovations will surely keep wordle with friends a favorite pastime.</p></div></section><section class="faq-section"><div class="container"><h2>Frequently Asked Questions</h2><p>Here are answers to common questions about playing wordle with friends. This section provides quick, factual information to help you better understand and enjoy the game. Learn about setup, gameplay, and competitive aspects to enhance your multiplayer Wordle experience.</p><div class="faq-grid"><div class="faq-item"><h3>What is wordle with friends?</h3><p>wordle with friends is a multiplayer version of the popular word-guessing game, Wordle. It allows you to play the daily puzzle or custom challenges against or with your friends. This social twist adds competitive or collaborative elements to the familiar guessing format.</p></div><div class="faq-item"><h3>How do I invite friends to play?</h3><p>The method to invite friends varies by platform. Typically, you can invite friends by sharing a unique game link. Some versions let you search for friends by username within the app. You can also send invites through connected social media accounts.</p></div><div class="faq-item"><h3>Can we play wordle with friends collaboratively?</h3><p>Yes, many platforms offer collaborative modes where friends can work together to solve a puzzle. In these modes, players might share guesses or hints to reach the solution collectively. This fosters teamwork and shared problem-solving among participants.</p></div><div class="faq-item"><h3>Is there a leaderboard for wordle with friends?</h3><p>Most wordle with friends versions feature a leaderboard. This displays player rankings based on various metrics, such as total wins, win streaks, or average guesses. Leaderboards add a competitive edge, allowing you to compare your performance with friends.</p></div><div class="faq-item"><h3>Can I create custom wordle puzzles for my friends?</h3><p>Yes, several wordle with friends platforms allow you to create custom puzzles. You can choose the secret word, adjust its length, or set other game parameters. This feature provides endless replayability and personalized challenges for your group.</p></div><div class="faq-item"><h3>What if my game isn't syncing properly?</h3><p>If your wordle with friends game isn't syncing, first check your internet connection. A stable connection is vital for real-time updates. You might also try refreshing the page, clearing your browser cache, or using a different browser to resolve synchronization issues.</p></div></div></div></section></main><footer class="site-footer"><div class="container"><div class="footer-top"><div class="footer-logo"><h3>Wordle With Friends</h3><p>Your trusted source for Wordle With Friends information.</p></div><div class="footer-contact"><h4>Contact Us</h4><p>Email: info@wordle-with-friends.com</p></div></div><div class="footer-links"><h4>Quick Links</h4><ul><li><a href="/">Wordle With Friends</a></li><li><a href="/play-wordle-with-friends-online">Play Wordle With Friends Online</a></li><li><a href="/create-custom-wordle-puzzles">Create Custom Wordle Puzzles</a></li><li><a href="/wordle-with-friends-solver-tool">Wordle With Friends Solver Tool</a></li><li><a href="/wordle-with-friends-statistics-tracker">Wordle With Friends Statistics Tracker</a></li><li><a href="/wordle-with-friends-for-kids">Wordle With Friends For Kids</a></li><li><a href="/about-us">About Us</a></li><li><a href="/contact-us">Contact Us</a></li><li><a href="/privacy-policy">Privacy Policy</a></li><li><a href="/terms-and-conditions">Terms And Conditions</a></li><li><a href="/disclaimer">Disclaimer</a></li></ul></div><div class="footer-bottom"><p>&copy; 2025 <a href="https://wordle-with-friend.vercel.app" target="_blank" >Wordle With Friends</a>. All rights reserved.</p></div></div></footer><button id="scroll-top" class="scroll-top"><i class="fa fa-arrow-up"></i></button><script src="/js/main.js"></script></body></html>
