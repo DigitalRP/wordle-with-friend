@@ -272,7 +272,7 @@ pre code {
 .nav-menu li a {
   display: block;
   padding: 0.5rem 1rem;
-  color: var(--header-footer-text);
+  color: black;
   font-weight: 500;
   position: relative;
   overflow: hidden;
