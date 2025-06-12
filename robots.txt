@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://wordle-with-friend.vercel.app/sitemap.xml
